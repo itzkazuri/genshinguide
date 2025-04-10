@@ -1,0 +1,772 @@
+[
+    {
+        "name": "Albedo",
+        "image": "img/genshinchar/albedo.webp",
+        "rarity": 5,
+        "releaseDate": "2020-12-23",
+        "vision": "Geo",
+        "weapon": "Sword"
+    },
+    {
+        "name": "Alhaitham",
+        "image": "img/genshinchar/alhaitam.webp",
+        "rarity": 5,
+        "releaseDate": "2023-01-18",
+        "vision": "Dendro",
+        "weapon": "Sword"
+    },
+    {
+        "name": "Aloy",
+        "image": "img/genshinchar/aloy.webp",
+        "rarity": 5,
+        "releaseDate": "2021-09-01",
+        "vision": "Cryo",
+        "weapon": "Bow"
+    },
+    {
+        "name": "Amber",
+        "image": "img/genshinchar/amber.webp",
+        "rarity": 4,
+        "releaseDate": "2020-09-28",
+        "vision": "Pyro",
+        "weapon": "Bow"
+    },
+    {
+        "name": "Arataki Itto",
+        "image": "img/genshinchar/arataki.webp",
+        "rarity": 5,
+        "releaseDate": "2021-12-14",
+        "vision": "Geo",
+        "weapon": "Claymore"
+    },
+    {
+        "name": "Arlecchino",
+        "image": "img/genshinchar/arlechino.webp",
+        "rarity": 5,
+        "releaseDate": "2024-04-24",
+        "vision": "Pyro",
+        "weapon": "Polearms"
+    },
+    {
+        "name": "Kamisato Ayaka",
+        "image": "/img/genshinchar/ayaka.webp",
+        "rarity": 5,
+        "releaseDate": "2021-07-21",
+        "vision": "Cryo",
+        "weapon": "Sword"   
+    },
+    {
+        "name": "Ayato",
+        "image": "/img/genshinchar/ayato.webp",
+        "rarity": 5,
+        "releaseDate": "2022-03-30",
+        "vision": "Hydro",
+        "weapon": "Sword"
+    },
+    {
+        "name": "Baizhu",
+        "image": "/img/genshinchar/baizhu.webp",
+        "rarity": 5,
+        "releaseDate": "2023-05-02",
+        "vision": "Dendro",
+        "weapon": "Catalyst"
+    },
+    {
+        "name": "Barbara",
+        "image": "/img/genshinchar/barbara.webp",
+        "rarity": 4,
+        "releaseDate": "2020-09-28",
+        "vision": "Hydro",
+        "weapon": "Catalyst"
+    },
+    {
+        "name": "Beidou",
+        "image": "/img/genshinchar/beizhou.webp",
+        "rarity": 4,
+        "releaseDate": "2020-09-28",
+        "vision": "Electro",
+        "weapon": "Claymore"
+    },
+    {
+        "name": "Bennett",
+        "image": "/img/genshinchar/bennet.webp",
+        "rarity": 4,
+        "releaseDate": "2020-09-28",
+        "vision": "Pyro",
+        "weapon": "Sword"
+    },
+    {
+        "name": "Candace",
+        "image": "/img/genshinchar/candace.webp",
+        "rarity": 4,
+        "releaseDate": "2022-09-21",
+        "vision": "Hydro",
+        "weapon": "Polearms"
+    },
+    {
+        "name": "Charlotte",
+        "image": "/img/genshinchar/charlotte.webp",
+        "rarity": 4,
+        "releaseDate": "2023-11-08",
+        "vision": "Cryo",
+        "weapon": "Catalyst"
+    },
+    {
+        "name": "Chevreuse",
+        "image": "/img/genshinchar/chevreuse.webp",
+        "rarity": 4,
+        "releaseDate": "2024-01-09",
+        "vision": "Pyro",
+        "weapon": "Polearms"
+    },
+    {
+        "name": "Childe",
+        "image": "/img/genshinchar/childe.webp",
+        "rarity": 5,
+        "releaseDate": "2020-11-11",
+        "vision": "Hydro",
+        "weapon": "Bow"
+    },
+    {
+        "name": "Chiori",
+        "image": "/img/genshinchar/chiori.webp",
+        "rarity": 5,
+        "releaseDate": "2024-03-13",
+        "vision": "Geo",
+        "weapon": "Sword"
+    },
+    {
+        "name": "Chongyun",
+        "image": "/img/genshinchar/chongyun.webp",
+        "rarity": 4,
+        "releaseDate": "2020-09-28",
+        "vision": "Cryo",
+        "weapon": "Claymore"
+    },
+    {
+        "name": "Clorinde",
+        "image": "/img/genshinchar/clorinde.webp",
+        "rarity": 5,
+        "releaseDate": "2024-05-28",
+        "vision": "Electro",
+        "weapon": "Sword"
+    },
+    {
+        "name": "Collei",
+        "image": "img/genshinchar/collei.webp",
+        "rarity": 4,
+        "releaseDate": "2022-08-24",
+        "vision": "Dendro",
+        "weapon": "Bow"
+    },
+    {
+        "name": "Citlali",
+        "image": "img/genshinchar/citlali.webp",
+        "rarity": 5,
+        "releaseDate": "2025-01-01",
+        "vision": "Cryo",
+        "weapon": "Catalyst"
+    },
+    {
+        "name": "Cyno",
+        "image": "img/genshinchar/cyno.webp",
+        "rarity": 5,
+        "releaseDate": "2022-09-28",
+        "vision": "Electro",
+        "weapon": "Polearms"
+    },
+    {
+        "name": "Dehya",
+        "image": "img/genshinchar/dehya.webp",
+        "rarity": 5,
+        "releaseDate": "2023-03-01",
+        "vision": "Pyro",
+        "weapon": "Claymore"
+    },
+    {
+        "name": "Diluc",
+        "image": "img/genshinchar/diluc.webp",
+        "rarity": 5,
+        "releaseDate": "2020-09-28",
+        "vision": "Pyro",
+        "weapon": "Claymore"
+    },
+    {
+        "name": "Diona",
+        "image": "img/genshinchar/diona.webp",
+        "rarity": 4,
+        "releaseDate": "2020-11-11",
+        "vision": "Cryo",
+        "weapon": "Bow"
+    },
+    {
+        "name": "Dori",
+        "image": "img/genshinchar/dori.webp",
+        "rarity": 4,
+        "releaseDate": "2022-08-24",
+        "vision": "Electro",
+        "weapon": "Claymore"
+    },
+    {
+        "name": "Eula",
+        "image": "img/genshinchar/elua.webp",
+        "rarity": 5,
+        "releaseDate": "2021-05-18",
+        "vision": "Cryo",
+        "weapon": "Claymore"
+    },
+    {
+        "name": "Faruzan",
+        "image": "img/genshinchar/faruzan.webp",
+        "rarity": 4,
+        "releaseDate": "2022-11-02",
+        "vision": "anemo",
+        "weapon": "Bow"
+    },
+    {
+        "name": "Fischl",
+        "image": "img/genshinchar/fischl.webp",
+        "rarity": 4,
+        "releaseDate": "2020-09-28",
+        "vision": "Electro",
+        "weapon": "Bow"
+    },
+    {
+        "name": "Freminet",
+        "image": "img/genshinchar/freminet.webp",
+        "rarity": 4,
+        "releaseDate": "2023-08-16",
+        "vision": "Cryo",
+        "weapon": "Claymore"
+    },
+    {
+        "name": "Furina",
+        "image": "img/genshinchar/furina.webp",
+        "rarity": 5,
+        "releaseDate": "2023-11-08",
+        "vision": "Hydro",
+        "weapon": "Sword"
+    },
+    {
+        "name": "Gaming",
+        "image": "img/genshinchar/gaming.webp",
+        "rarity": 4,
+        "releaseDate": "2024-01-31",
+        "vision": "Pyro",
+        "weapon": "Claymore"
+    },
+    {
+        "name": "Ganyu",
+        "image": "img/genshinchar/ganyu.webp",
+        "rarity": 5,
+        "releaseDate": "2021-01-12",
+        "vision": "Cryo",
+        "weapon": "Bow"
+    },
+    {
+        "name": "Gorou",
+        "image": "img/genshinchar/gorou.webp",
+        "rarity": 4,
+        "releaseDate": "2021-12-14",
+        "vision": "Geo",
+        "weapon": "Bow"
+    },
+    {
+        "name": "Heizou",
+        "image": "img/genshinchar/heizou.webp",
+        "rarity": 4,
+        "releaseDate": "2022-07-13",
+        "vision": "anemo",
+        "weapon": "Catalyst"
+    },
+    {
+        "name": "Hu Tao",
+        "image": "img/genshinchar/hutao.webp",
+        "rarity": 5,
+        "releaseDate": "2021-03-02",
+        "vision": "Pyro",
+        "weapon": "Polearms"
+    },
+    {
+        "name": "Iansan",
+        "image": "img/genshinchar/iansan.webp",
+        "rarity": 4,
+        "releaseDate": "2025-03-18",
+        "vision": "Electro",
+        "weapon": "Sword"
+    },
+    {
+        "name": "Jean",
+        "image": "img/genshinchar/jean.webp",
+        "rarity": 5,
+        "releaseDate": "2020-09-28",
+        "vision": "anemo",
+        "weapon": "Sword"
+
+    },
+    {
+        "name": "Kaedehara Kazuha",
+        "image": "img/genshinchar/kazuha.webp",
+        "rarity": 5,
+        "releaseDate": "2021-06-29",
+        "vision": "anemo",
+        "weapon": "Sword"
+    },
+    {
+        "name": "Kaeya",
+        "image": "img/genshinchar/kaeya.webp",
+        "rarity": 4,
+        "releaseDate": "2020-09-28",
+        "vision": "Cryo",
+        "weapon": "Sword"
+    },
+    {
+        "name": "Kachina",
+        "image": "img/genshinchar/kachina.webp",
+        "rarity": 4,
+        "releaseDate": "2024-10-28",
+        "vision": "Geo",
+        "weapon": "Polearms"
+    },
+    {
+        "name": "Kaveh",
+        "image": "img/genshinchar/kaveh.webp",
+        "rarity": 4,
+        "releaseDate": "2023-05-02",
+        "vision": "Dendro",
+        "weapon": "Claymore"
+    },
+    {
+        "name": "Keqing",
+        "image": "img/genshinchar/keqing.webp",
+        "rarity": 5,
+        "releaseDate": "2020-09-28",
+        "vision": "Electro",
+        "weapon": "Sword"
+    },
+    {
+        "name": "Kirara",
+        "image": "img/genshinchar/kirara.webp",
+        "rarity": 4,
+        "releaseDate": "2023-05-24", 
+        "vision": "Dendro",
+        "weapon": "Sword"
+    },
+    {
+        "name": "Kinich",
+        "image": "img/genshinchar/kinich.webp",
+        "rarity": 5,
+        "releaseDate": "2024-09-17",
+        "vision": "Dendro",
+        "weapon": "Claymore"
+    },
+    {   
+        "name": "Klee",
+        "image": "img/genshinchar/klee.webp",
+        "rarity": 5,
+        "releaseDate": "2020-10-20",
+        "vision": "Pyro",
+        "weapon": "Catalyst"
+    },
+    {
+        "name": "Kuki Shinobu",
+        "image": "img/genshinchar/kuki.webp",
+        "rarity": 4,
+        "releaseDate": "2022-06-21",
+        "vision": "Electro",
+        "weapon": "Sword"
+    },
+    {
+        "name": "Kujou Sara",
+        "image": "img/genshinchar/kujou.webp",
+        "rarity": 4,
+        "releaseDate": "2021-09-01",
+        "vision": "Electro",
+        "weapon": "Bow"
+    },
+    {
+        "name": "Layla",
+        "image": "img/genshinchar/layla.webp",
+        "rarity": 4,
+        "releaseDate": "2022-11-02",
+        "vision": "Cryo",
+        "weapon": "Sword"
+    },
+    {
+        "name": "Lisa",
+        "image": "img/genshinchar/lisa.web",
+        "rarity": 4,
+        "releaseDate": "2020-09-28",
+        "vision": "Electro",
+        "weapon": "Catalyst"
+    },
+    {
+        "name": "Lynette",
+        "image": "img/genshinchar/lynette.web",
+        "rarity": 4,
+        "releaseDate": "2023-08-16",
+        "vision": "anemo",
+        "weapon": "Sword"
+    },
+    {
+        "name": "Lyney",
+        "image": "img/genshinchar/lyney.webp",
+        "rarity": 5,
+        "releaseDate": "2023-08-16",
+        "vision": "Pyro",
+        "weapon": "Bow"
+    },
+    {
+        "name": "Mavuika",
+        "image": "img/genshinchar/mavuika.webp",
+        "rarity": 5,
+        "releaseDate": "2025-01-01",
+        "vision": "Pyro",
+        "weapon": "Claymore"
+    },
+    {
+        "name": "Mika",
+        "image": "img/genshinchar/mika.webp",
+        "rarity": 4,
+        "releaseDate": "2023-03-01",
+        "vision": "Cryo",
+        "weapon": "Polearms"
+    },
+    {
+        "name": "Mualani",
+        "image": "img/genshinchar/mualani.webp",
+        "rarity": 5,
+        "releaseDate": "2024-08-28",
+        "vision": "Hydro",
+        "weapon": "Catalyst"
+    },
+    {
+        "name": "Mona",
+        "image": "img/genshinchar/mona.webp",
+        "rarity": 5,
+        "releaseDate": "2020-09-28",
+        "vision": "Hydro",
+        "weapon": "Catalyst"
+    },
+    {
+        "name": "Nahida",
+        "image": "img/genshinchar/nahida.webp",
+        "rarity": 5,
+        "releaseDate": "2022-11-02",
+        "vision": "Dendro",
+        "weapon": "Catalyst"
+    },
+    {
+        "name": "Navia",
+        "image": "img/genshinchar/navia.webp",
+        "rarity": 5,
+        "releaseDate": "2023-12-20",
+        "vision": "Geo",
+        "weapon": "Claymore"
+    },
+    {
+        "name": "Neuvillette",
+        "image": "img/genshinchar/neuvillete.webp",
+        "rarity": 5,
+        "releaseDate": "2023-09-27",
+        "vision": "Hydro",
+        "weapon": "Catalyst"
+    },
+    {
+        "name": "Nilou",
+        "image": "img/genshinchar/nilou.webp",
+        "rarity": 5,
+        "releaseDate": "2022-09-28",
+        "vision": "Hydro",
+        "weapon": "Sword"
+    },
+    {
+        "name": "Ningguang",
+        "image": "img/genshinchar/ningguang.webp",
+        "rarity": 4,
+        "releaseDate": "2020-09-28",
+        "vision": "Geo",
+        "weapon": "Catalyst"
+    },
+    {
+        "name": "Noelle",
+        "image": "img/genshinchar/noelle.webp",
+        "rarity": 4,
+        "releaseDate": "2020-09-28",
+        "vision": "Geo",
+        "weapon": "Claymore"
+    },
+    {
+        "name": "Ororon",
+        "image": "img/genshinchar/ororon.webp",
+        "rarity": 4,
+        "releaseDate": "2024-11-20",
+        "vision": "Electro",
+        "weapon": "Bow"
+    },
+    {
+        "name": "Qiqi",
+        "image": "img/genshinchar/qiqi.webp",
+        "rarity": 5,
+        "releaseDate": "2020-09-28",
+        "vision": "Cryo",
+        "weapon": "Sword"
+    },
+    {
+        "name": "Raiden Shogun",
+        "image": "img/genshinchar/shougon.webp",
+        "rarity": 5,
+        "releaseDate": "2021-09-01",
+        "vision": "Electro",
+        "weapon": "Polearms"
+    },
+    {
+        "name": "Razor",
+        "image": "img/genshinchar/razor.webp",
+        "rarity": 4,
+        "releaseDate": "2020-09-28",
+        "vision": "Electro",
+        "weapon": "Claymore"
+    },
+    {
+        "name": "Rosaria",
+        "image": "img/genshinchar/rosaria.webp",
+        "rarity": 4,
+        "releaseDate": "2021-04-07",
+        "vision": "Cryo",
+        "weapon": "Polearms"
+    },
+    {
+        "name": "Sayu",
+        "image": "img/genshinchar/sayu.webp",
+        "rarity": 4,
+        "releaseDate": "2021-08-10",
+        "vision": "anemo",
+        "weapon": "Polearms"
+    },
+    {
+        "name": "Wanderer",
+        "image": "/img/genshinchar/wanderer.webp",
+        "rarity": 5,
+        "releaseDate": "2022-12-07",
+        "vision":"anemo",
+        "weapon":"Catalyst"
+    },
+    {
+        "name": "Shenhe",
+        "image": "img/genshinchar/shenhe.webp",
+        "rarity": 5,
+        "releaseDate": "2022-01-05",
+        "vision":"Cryo",
+        "weapon":"Polearms"
+    },
+    {
+        "name": "Sigewinne",
+        "image": "img/genshinchar/sigewinne.webp",
+        "rarity": 4,
+        "releaseDate": "2025-02-18",
+        "vision": "Hydro",
+        "weapon": "Bow"
+    },
+    {
+        "name": "Sucrose",
+        "image": "img/genshinchar/sucrose.webp",
+        "rarity": 4,
+        "releaseDate": "2020-11-11",
+        "vision": "anemo",
+        "weapon": "Catalyst"
+    },
+    {
+        "name": "Travleer (anemo)",
+        "image": "img/genshinchar/tabibito.webp",
+        "rarity": 5,
+        "releaseDate": "2020-09-28",
+        "vision": "anemo",
+        "weapon": "Sword"
+    },
+    {
+        "name": "Traveler (geo)",
+        "image": "img/genshinchar/tabibito.webp",
+        "rarity": 5,
+        "releaseDate": "2020-09-28",
+        "vision": "Geo",
+        "weapon": "Sword"
+    },
+    {
+        "name": "Traveler (electro)",
+        "image": "img/genshinchar/tabibito.webp",
+        "rarity": 5,
+        "releaseDate": "2020-09-28",
+        "vision": "Electro",
+        "weapon": "Sword"
+    },
+    {
+        "name": "Traveler (dendro)",
+        "image": "img/genshinchar/tabibito.webp",
+        "rarity": 5,
+        "releaseDate": "2020-09-28",
+        "vision": "Dendro",
+        "weapon": "Sword"
+    },
+    {
+        "name": "Traveler (hydro)",
+        "image": "img/genshinchar/tabibito.webp",
+        "rarity": 5,
+        "releaseDate": "2020-09-28",
+        "vision": "Hydro",
+        "weapon": "Sword"
+    },
+    {
+        "name": "Traveler (pyro)",
+        "image": "img/genshinchar/tabibito.webp",
+        "rarity": 5,
+        "releaseDate": "2020-09-28",
+        "vision": "Pyro",
+        "weapon": "Sword"
+    },
+    
+    {
+        "name": "Thoma",
+        "image": "img/genshinchar/thoma.webp",
+        "rarity": 4,
+        "releaseDate": "2021-11-02",
+        "vision": "Pyro",
+        "weapon": "Polearms"
+    },
+    {
+        "name": "Tighnari",
+        "image": "img/genshinchar/tighnari.webp",
+        "rarity": 5,
+        "releaseDate": "2022-08-24",
+        "vision": "Dendro",
+        "weapon": "Bow"
+    },
+    {
+        "name": "Venti",
+        "image": "img/genshinchar/venti.webp",
+        "rarity": 5,
+        "releaseDate": "2020-09-28",
+        "vision": "anemo",
+        "weapon": "Bow"
+    },
+    {
+        "name": "Varessa",
+        "image": "img/genshinchar/varessa.webp",
+        "rarity": 5,
+        "releaseDate": "2025-03-26",
+        "vision": "Electro",
+        "weapon": "Catalyst"
+    },
+    {
+        "name": "Wriothesley",
+        "image": "img/genshinchar/wrio.webp",
+        "rarity": 5,
+        "releaseDate": "2023-09-27",
+        "vision": "Cryo",
+        "weapon": "Catalyst"
+    },
+    {
+        "name": "Xiangling",
+        "image": "img/genshinchar/xiangling.webp",
+        "rarity": 4,
+        "releaseDate": "2020-09-28",
+        "vision": "Pyro",
+        "weapon": "Polearms"
+    },
+    {
+        "name": "Xianyun",
+        "image": "img/genshinchar/xianyun.webp",
+        "rarity": 5,
+        "releaseDate": "2024-01-31",
+        "vision": "anemo",
+        "weapon": "Catalyst"
+    },
+    {
+        "name": "Xiao",
+        "image": "img/genshinchar/xiao.webp",
+        "rarity": 5,
+        "releaseDate": "2021-02-03",
+        "vision": "anemo",
+        "weapon": "Polearms"
+    },
+    {
+        "name": "Xingqiu",
+        "image": "img/genshinchar/xingqiu.webp",
+        "rarity": 4,
+        "releaseDate": "2020-09-28",
+        "vision": "Hydro",
+        "weapon": "Sword"
+    },
+    {
+        "name": "Xilonen",
+        "image": "img/genshinchar/xilonen.webp",
+        "rarity": 5,
+        "releaseDate": "2024-10-09",
+        "vision": "Geo",
+        "weapon": "Sword"
+    },
+    {
+        "name": "Xinyan",
+        "image": "img/genshinchar/xinyan.webp",
+        "rarity": 4,
+        "releaseDate": "2020-12-01",
+        "vision": "Pyro",
+        "weapon": "Polearms"
+    },
+    {
+        "name": "Yae Miko",
+        "image": "img/genshinchar/miko.webp",
+        "rarity": 5,
+        "releaseDate": "2022-02-16",
+        "vision": "Electro",
+        "weapon": "Catalyst"
+    },
+    {
+        "name": "Yumemizuki Mizuki",
+        "image": "img/genshinchar/mizuki.webp",
+        "rarity": 5,
+        "releaseDate": "2025-02-11",
+        "vision": "anemo",
+        "weapon": "Catalyst"
+    },
+    {
+        "name": "Yanfei",
+        "image": "img/genshinchar/yanfei.webp",
+        "rarity": 4,
+        "releaseDate": "2021-04-28",
+        "vision": "Pyro",
+        "weapon": "Catalyst"
+    },
+    {
+        "name": "Yaoyao",
+        "image": "img/genshinchar/yaoyao.webp",
+        "rarity": 4,
+        "releaseDate": "2023-01-18",
+        "vision": "Dendro",
+        "weapon": "Polearms"
+    },
+    {
+        "name": "Yelan",
+        "image": "img/genshinchar/yelan.webp",
+        "rarity": 5,
+        "releaseDate": "2022-05-31",
+        "vision": "Hydro",
+        "weapon": "Bow"
+    },
+    {
+        "name": "Yun Jin",
+        "image": "img/genshinchar/yunjin.webp",
+        "rarity": 4,
+        "releaseDate": "2022-01-05",
+        "vision": "Geo",
+        "weapon": "Polearms"
+    },
+    {
+        "name": "Zhongli",
+        "image": "img/genshinchar/zhongli.webp",
+        "rarity": 5,
+        "releaseDate": "2020-12-01",
+        "vision": "Geo",
+        "weapon": "Polearms"
+    }
+]

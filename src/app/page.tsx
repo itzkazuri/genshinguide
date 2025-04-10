@@ -1,102 +1,273 @@
-import Image from "next/image";
+"use client";
+import { useState, useEffect } from "react";
+import CharacterCard from "@/Components/CharacterCard";
+import { Menu, X } from "lucide-react";
+
+
+interface Character {
+  name: string;
+  image: string;
+  rarity: number;
+  vision: string;
+  weapon: string;
+}
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isGuideDropdownOpen, setIsGuideDropdownOpen] = useState(false);
+  const [isSelectGameDropdownOpen, setIsSelectGameDropdownOpen] = useState(false);
+  const [characters, setCharacters] = useState<Character[]>([]);
+  const [activeFilters, setActiveFilters] = useState<{ [key: string]: Set<string> }>({
+    rarity: new Set(),
+    vision: new Set(), // Ganti dari element ke vision
+    weapon: new Set(),
+  });
+  
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  useEffect(() => {
+    const loadCharacters = async () => {
+      try {
+        const response = await fetch("/characters.json");
+        const data = await response.json();
+
+        const sorted = data.sort((a: any, b: any) => {
+          if (b.rarity !== a.rarity) return b.rarity - a.rarity;
+          return a.name.localeCompare(b.name);
+        });
+
+        setCharacters(sorted);
+      } catch (error) {
+        console.error("Gagal memuat karakter:", error);
+      }
+    };
+
+    loadCharacters();
+  }, []);
+
+  const filters = [
+    { type: "rarity", value: "5", image: "/5-star.png" },
+    { type: "rarity", value: "4", image: "/4-star.png" },
+    { type: "vision", value: "anemo", image: "/img/vision/element_anemo.webp" },
+    { type: "vision", value: "geo", image: "/img/vision/element_geo.webp" },
+    { type: "vision", value: "electro", image: "/img/vision/element_electro.webp" },
+    { type: "vision", value: "dendro", image: "/img/vision/element_dendro.webp" },
+    { type: "vision", value: "hydro", image: "/img/vision/element_hydro.webp" },
+    { type: "vision", value: "pyro", image: "/img/vision/element_pyro.webp" },
+    { type: "vision", value: "cryo", image: "/img/vision/element_cryo.webp" },
+    { type: "weapon", value: "sword", image: "/sword.png" },
+    { type: "weapon", value: "claymore", image: "/claymore.png" },
+    { type: "weapon", value: "bow", image: "/bow.png" },
+    { type: "weapon", value: "catalyst", image: "/catalyst.png" },
+  ];
+
+  const toggleFilter = (type: string, value: string) => {
+    setActiveFilters(prev => {
+      const currentSet = new Set(prev[type]);
+  
+      // Kalau udah dipilih, maka hapus (toggle off)
+      if (currentSet.has(value)) {
+        return { ...prev, [type]: new Set() };
+      }
+  
+      // Kalau belum dipilih, ganti isinya jadi satu itu aja
+      return { ...prev, [type]: new Set([value]) };
+    });
+  };
+  
+
+  const isCharacterMatched = (character: Character) => {
+    const rarityMatch =
+      activeFilters.rarity.size === 0 || activeFilters.rarity.has(String(character.rarity));
+  
+      const vision = character.vision ? character.vision.toLowerCase() : "";
+
+    const weapon = character.weapon ? character.weapon.toLowerCase() : "";
+  
+    const visionMatch =
+  activeFilters.vision.size === 0 || activeFilters.vision.has(vision);
+
+  
+    const weaponMatch =
+      activeFilters.weapon.size === 0 || activeFilters.weapon.has(weapon);
+  
+    return rarityMatch && visionMatch && weaponMatch;
+  };
+
+  const filteredCharacters = characters.filter(isCharacterMatched);
+
+  const isNoMatch = filteredCharacters.length === 0 && (
+    activeFilters.rarity.size > 0 ||
+    activeFilters.vision.size > 0 ||
+    activeFilters.weapon.size > 0
+  );
+
+  return (
+    <div className="min-h-screen bg-[#1e1d22] text-white font-sans flex flex-col">
+      <nav className="bg-[#16324c] px-6 py-3 shadow">
+        <div className="max-w-7xl mx-auto flex items-center justify-between">
+          <div className="flex items-center">
+            <div className="w-8 h-8 rounded-full overflow-hidden mr-4">
+              <img src="/img/etc/ayaka.jpg" alt="Genshin Impact" className="w-full h-full object-cover" />
+            </div>
+            <div className="text-xl font-bold mr-8">juligenshin</div>
+            <div className="hidden md:flex items-center gap-4 text-sm">
+              <div className="relative group">
+                <button
+                  className="hover:underline"
+                  onClick={() => setIsGuideDropdownOpen(!isGuideDropdownOpen)}
+                >
+                  Guide
+                </button>
+                {isGuideDropdownOpen && (
+                  <div className="absolute left-0 bg-[#1e1d22] shadow p-2 rounded mt-2 w-32">
+                    <a href="#" className="block px-4 py-1 hover:bg-[#2a2a2e]">Character</a>
+                    <a href="#" className="block px-4 py-1 hover:bg-[#2a2a2e]">Your Stat</a>
+                  </div>
+                )}
+              </div>
+              <a href="/coming-soon" className="hover:underline">Farming</a>
+              <a href="#" className="hover:underline">Meta Char</a>
+              <div className="relative group">
+                <button
+                  className="hover:underline"
+                  onClick={() => setIsSelectGameDropdownOpen(!isSelectGameDropdownOpen)}
+                >
+                  Select Game
+                </button>
+                {isSelectGameDropdownOpen && (
+                  <div className="absolute left-0 bg-[#1e1d22] shadow p-2 rounded mt-2 w-48">
+                    <a href="#" className="flex items-center gap-2 px-4 py-1 hover:bg-[#2a2a2e]">
+                      <img src="/genshin-icon.png" className="w-5 h-5" alt="Genshin" /> Genshin
+                    </a>
+                    <a href="#" className="flex items-center gap-2 px-4 py-1 hover:bg-[#2a2a2e]">
+                      <img src="/img/etc/unnamed.png" className="w-5 h-5" alt="HSR" /> Honkai: Star Rail
+                    </a>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+          <select className="bg-[#16324c] text-white border border-white rounded px-2 py-1 text-sm hidden md:block">
+            <option>English</option>
+            <option>Indonesia</option>
+            <option>日本語</option>
+          </select>
+          <div className="md:hidden">
+            <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
+        </div>
+        {mobileMenuOpen && (
+          <div className="md:hidden mt-3 flex flex-col gap-2 px-4 text-sm">
+            <div className="flex flex-col gap-1">
+              <span className="font-semibold">Guide</span>
+              <a href="#">Character</a>
+              <a href="#">Your Stat</a>
+            </div>
+            <a href="#">Farming</a>
+            <a href="#">Meta Char</a>
+            <div className="flex flex-col gap-1">
+              <span className="font-semibold">Select Game</span>
+              <a href="#" className="flex items-center gap-2">
+                <img src="/genshin-icon.png" className="w-5 h-5" alt="Genshin" /> Genshin
+              </a>
+              <a href="#" className="flex items-center gap-2">
+                <img src="/hsr-icon.png" className="w-5 h-5" alt="HSR" /> Honkai: Star Rail
+              </a>
+            </div>
+            <select className="bg-[#16324c] text-white border border-white rounded px-2 py-1 text-sm w-fit">
+              <option>English</option>
+              <option>Indonesia</option>
+              <option>日本語</option>
+            </select>
+          </div>
+        )}
+      </nav>
+
+      <main className="p-6 flex-grow">
+        <h1 className="text-2xl font-bold text-center mb-4">Character List</h1>
+
+        <div className="bg-[#16324c] rounded-lg px-4 py-2 mb-6 overflow-x-auto">
+          <div className="flex items-center gap-2 justify-center text-xs">
+            <div className="flex items-center gap-1 pr-3 border-r border-[#2a2a2e]">
+              {filters.slice(0, 2).map((filter, index) => (
+                <button
+                  key={index}
+                  onClick={() => toggleFilter(filter.type, filter.value)}
+                  className={`w-6 h-6 flex items-center justify-center rounded transition ${
+                    activeFilters[filter.type].has(filter.value)
+                      ? "bg-yellow-500"
+                      : "bg-[#1e1d22] hover:bg-[#2a2a2e]"
+                  }`}
+                >
+                  <img src={filter.image} alt={filter.value} className="w-4 h-4 object-contain" />
+                </button>
+              ))}
+            </div>
+            <div className="flex items-center gap-1 pr-3 border-r border-[#2a2a2e]">
+              {filters.slice(2, 9).map((filter, index) => (
+                <button
+                  key={index}
+                  onClick={() => toggleFilter(filter.type, filter.value)}
+                  className={`w-6 h-6 flex items-center justify-center rounded transition ${
+                    activeFilters[filter.type].has(filter.value)
+                      ? "bg-yellow-500"
+                      : "bg-[#1e1d22] hover:bg-[#2a2a2e]"
+                  }`}
+                >
+                  <img src={filter.image} alt={filter.value} className="w-4 h-4 object-contain" />
+                </button>
+              ))}
+            </div>
+            <div className="flex items-center gap-1">
+              {filters.slice(9).map((filter, index) => (
+                <button
+                  key={index}
+                  onClick={() => toggleFilter(filter.type, filter.value)}
+                  className={`w-6 h-6 flex items-center justify-center rounded transition ${
+                    activeFilters[filter.type].has(filter.value)
+                      ? "bg-yellow-500"
+                      : "bg-[#1e1d22] hover:bg-[#2a2a2e]"
+                  }`}
+                >
+                  <img src={filter.image} alt={filter.value} className="w-4 h-4 object-contain" />
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 px-2 sm:px-4">
+        {isNoMatch ? (
+        <div className="col-span-full text-center text-sm text-gray-400">
+         Characther Not Found.
+      </div>
+      ) : (
+       filteredCharacters.map((character, index) => (
+          <CharacterCard
+          key={index}
+          name={character.name}
+         image={character.image}
+      rarity={character.rarity}
+       />
+      ))
+    )}
+
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      <footer className="bg-[#16324c] text-white py-6 mt-12">
+        <div className="max-w-4xl mx-auto flex flex-col items-center gap-4">
+          <div className="flex justify-center gap-4">
+            <a href="#" className="hover:opacity-80 transition"><img src="/twitter-icon.png" alt="Twitter" className="w-6 h-6" /></a>
+            <a href="#" className="hover:opacity-80 transition"><img src="/facebook-icon.png" alt="Facebook" className="w-6 h-6" /></a>
+            <a href="#" className="hover:opacity-80 transition"><img src="/discord-icon.png" alt="Discord" className="w-6 h-6" /></a>
+            <a href="#" className="hover:opacity-80 transition"><img src="/youtube-icon.png" alt="YouTube" className="w-6 h-6" /></a>
+          </div>
+          <div className="text-xs text-center">© 2025 Kadek Juli. All rights reserved.</div>
+          <div className="text-xs text-center">This Web Under Development</div>
+        </div>
       </footer>
     </div>
   );
