@@ -29,21 +29,22 @@ export default function Home() {
     const loadCharacters = async () => {
       try {
         const response = await fetch("/characters.json");
-        const data = await response.json();
-
-        const sorted = data.sort((a: any, b: any) => {
+        const data: Character[] = await response.json(); // Cast data ke tipe Character[]
+  
+        const sorted = data.sort((a, b) => {
           if (b.rarity !== a.rarity) return b.rarity - a.rarity;
           return a.name.localeCompare(b.name);
         });
-
+  
         setCharacters(sorted);
       } catch (error) {
         console.error("Gagal memuat karakter:", error);
       }
     };
-
+  
     loadCharacters();
   }, []);
+  
 
   const filters = [
     { type: "rarity", value: "5", image: "/5-star.png" },
