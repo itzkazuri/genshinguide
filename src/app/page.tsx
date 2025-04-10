@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import CharacterCard from "@/Components/CharacterCard";
 import { Menu, X } from "lucide-react";
 
@@ -22,7 +23,7 @@ export default function Home() {
     vision: new Set(), // Ganti dari element ke vision
     weapon: new Set(),
   });
-  
+
 
   useEffect(() => {
     const loadCharacters = async () => {
@@ -63,33 +64,33 @@ export default function Home() {
   const toggleFilter = (type: string, value: string) => {
     setActiveFilters(prev => {
       const currentSet = new Set(prev[type]);
-  
+
       // Kalau udah dipilih, maka hapus (toggle off)
       if (currentSet.has(value)) {
         return { ...prev, [type]: new Set() };
       }
-  
+
       // Kalau belum dipilih, ganti isinya jadi satu itu aja
       return { ...prev, [type]: new Set([value]) };
     });
   };
-  
+
 
   const isCharacterMatched = (character: Character) => {
     const rarityMatch =
       activeFilters.rarity.size === 0 || activeFilters.rarity.has(String(character.rarity));
-  
+
       const vision = character.vision ? character.vision.toLowerCase() : "";
 
     const weapon = character.weapon ? character.weapon.toLowerCase() : "";
-  
+
     const visionMatch =
   activeFilters.vision.size === 0 || activeFilters.vision.has(vision);
 
-  
+
     const weaponMatch =
       activeFilters.weapon.size === 0 || activeFilters.weapon.has(weapon);
-  
+
     return rarityMatch && visionMatch && weaponMatch;
   };
 
@@ -120,13 +121,13 @@ export default function Home() {
                 </button>
                 {isGuideDropdownOpen && (
                   <div className="absolute left-0 bg-[#1e1d22] shadow p-2 rounded mt-2 w-32">
-                    <a href="#" className="block px-4 py-1 hover:bg-[#2a2a2e]">Character</a>
-                    <a href="#" className="block px-4 py-1 hover:bg-[#2a2a2e]">Your Stat</a>
+                    <Link href="/" className="block px-4 py-1 hover:bg-[#2a2a2e]">Character</Link>
+                    <Link href="/coming-soon" className="block px-4 py-1 hover:bg-[#2a2a2e]">Your Stat</Link>
                   </div>
                 )}
               </div>
-              <a href="/coming-soon" className="hover:underline">Farming</a>
-              <a href="#" className="hover:underline">Meta Char</a>
+              <Link href="/coming-soon" className="hover:underline">Farming</Link>
+              <Link href="/coming-soon" className="hover:underline">Meta Char</Link>
               <div className="relative group">
                 <button
                   className="hover:underline"
@@ -136,12 +137,12 @@ export default function Home() {
                 </button>
                 {isSelectGameDropdownOpen && (
                   <div className="absolute left-0 bg-[#1e1d22] shadow p-2 rounded mt-2 w-48">
-                    <a href="#" className="flex items-center gap-2 px-4 py-1 hover:bg-[#2a2a2e]">
+                    <Link href="#" className="flex items-center gap-2 px-4 py-1 hover:bg-[#2a2a2e]">
                       <img src="/genshin-icon.png" className="w-5 h-5" alt="Genshin" /> Genshin
-                    </a>
-                    <a href="#" className="flex items-center gap-2 px-4 py-1 hover:bg-[#2a2a2e]">
+                    </Link>
+                    <Link href="/coming-soon" className="flex items-center gap-2 px-4 py-1 hover:bg-[#2a2a2e]">
                       <img src="/img/etc/unnamed.png" className="w-5 h-5" alt="HSR" /> Honkai: Star Rail
-                    </a>
+                    </Link>
                   </div>
                 )}
               </div>
@@ -162,19 +163,19 @@ export default function Home() {
           <div className="md:hidden mt-3 flex flex-col gap-2 px-4 text-sm">
             <div className="flex flex-col gap-1">
               <span className="font-semibold">Guide</span>
-              <a href="#">Character</a>
-              <a href="#">Your Stat</a>
+              <Link href="/">Character</Link>
+              <Link href="/coming-soon">Your Stat</Link>
             </div>
-            <a href="#">Farming</a>
-            <a href="#">Meta Char</a>
+            <Link href="/coming-soon">Farming</Link>
+            <Link href="#">Meta Char</Link>
             <div className="flex flex-col gap-1">
               <span className="font-semibold">Select Game</span>
-              <a href="#" className="flex items-center gap-2">
+              <Link href="/coming-soon" className="flex items-center gap-2">
                 <img src="/genshin-icon.png" className="w-5 h-5" alt="Genshin" /> Genshin
-              </a>
-              <a href="#" className="flex items-center gap-2">
+              </Link>
+              <Link href="#" className="flex items-center gap-2">
                 <img src="/hsr-icon.png" className="w-5 h-5" alt="HSR" /> Honkai: Star Rail
-              </a>
+              </Link>
             </div>
             <select className="bg-[#16324c] text-white border border-white rounded px-2 py-1 text-sm w-fit">
               <option>English</option>
@@ -241,18 +242,18 @@ export default function Home() {
         <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 px-2 sm:px-4">
         {isNoMatch ? (
         <div className="col-span-full text-center text-sm text-gray-400">
-         Characther Not Found.
-      </div>
-      ) : (
-       filteredCharacters.map((character, index) => (
-          <CharacterCard
-          key={index}
-          name={character.name}
-         image={character.image}
-      rarity={character.rarity}
-       />
-      ))
-    )}
+          Characther Not Found.
+        </div>
+        ) : (
+          filteredCharacters.map((character, index) => (
+            <CharacterCard
+            key={index}
+            name={character.name}
+            image={character.image}
+          rarity={character.rarity}
+          />
+          ))
+        )}
 
         </div>
       </main>
@@ -260,10 +261,9 @@ export default function Home() {
       <footer className="bg-[#16324c] text-white py-6 mt-12">
         <div className="max-w-4xl mx-auto flex flex-col items-center gap-4">
           <div className="flex justify-center gap-4">
-            <a href="#" className="hover:opacity-80 transition"><img src="/twitter-icon.png" alt="Twitter" className="w-6 h-6" /></a>
-            <a href="#" className="hover:opacity-80 transition"><img src="/facebook-icon.png" alt="Facebook" className="w-6 h-6" /></a>
-            <a href="#" className="hover:opacity-80 transition"><img src="/discord-icon.png" alt="Discord" className="w-6 h-6" /></a>
-            <a href="#" className="hover:opacity-80 transition"><img src="/youtube-icon.png" alt="YouTube" className="w-6 h-6" /></a>
+            <Link href="https://facebook.com/kadekjuli" className="hover:opacity-80 transition" target="_blank" rel="noopener noreferrer"><img src="/facebook-icon.png" alt="Facebook" className="w-6 h-6" /></Link>
+            <Link href="https://discord.com/notdkjuli" className="hover:opacity-80 transition" target="_blank" rel="noopener noreferrer"><img src="/discord-icon.png" alt="Discord" className="w-6 h-6" /></Link>
+            <Link href="https://youtube.com" className="hover:opacity-80 transition" target="_blank" rel="noopener noreferrer"><img src="/youtube-icon.png" alt="YouTube" className="w-6 h-6" /></Link>
           </div>
           <div className="text-xs text-center">© 2025 Kadek Juli. All rights reserved.</div>
           <div className="text-xs text-center">This Web Under Development</div>
