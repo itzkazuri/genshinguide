@@ -1,0 +1,44 @@
+{
+  "name": "Kamisato Ayaka",
+  "element": "Cryo",
+  "weapon": "Sword",
+  "slug": "kamisato-ayaka",
+  "image": "ayaka.webp",
+  "rarity": 5,
+  "talentUpGuide": ["Elemental Skill", "Elemental Burst", "Normal Attack"],
+  "bestWeapons": [
+    { "name": "Mistsplitter Reforged", "image": "mistsplitter-reforged.png" },
+    { "name": "Amenoma Kageuchi", "image": "amenoma-kageuchi.png" }
+  ],
+  "materialFarming": {
+    "talentBooks": "Teachings of Elegance",
+    "bossMaterial": "Bloodjade Branch",
+    "commonMaterial": "Kageuchi Handguard",
+    "ascensionGem": "Shivada Jade Gemstone",
+    "localSpecialty": "Sakura Bloom",
+    "totalMora": "2092530"
+  },
+  "artifactSubstats": {
+    "freezeParty": ["CRIT DMG", "CRIT Rate", "ATK%", "Cryo DMG Bonus", "Energy Recharge"],
+    "meltParty": ["CRIT DMG", "CRIT Rate", "ATK%", "Elemental Mastery"]
+  },
+  "teams": {
+    "freezePremium": {
+      "members": ["Shenhe", "Kokomi", "Kazuha", "Ayaka"],
+      "description": "Premium freeze team with maximum cryo damage and grouping"
+    },
+    "freezeF2P": {
+      "members": ["Diona", "Xingqiu", "Sucrose", "Ayaka"],
+      "description": "Budget-friendly freeze team with good survivability"
+    },
+    "meltTeam": {
+      "members": ["Kazuha", "Bennett", "Xiangling", "Ayaka"],
+      "description": "Melt composition for frontloaded damage"
+    },
+    "monoCryo": {
+      "members": ["Shenhe", "Kazuha", "Diona", "Ayaka"],
+      "description": "Pure cryo team against unfreezable enemies"
+    }
+  },
+  "showcaseVideo": "https://www.youtube.com/watch?v=hB7CDrVnNCs"
+}

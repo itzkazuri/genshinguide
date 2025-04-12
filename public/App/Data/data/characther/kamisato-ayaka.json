@@ -1,0 +1,132 @@
+{
+  "character": "Kamisato Ayaka",
+  "element": "Cryo",
+  "rarity": "5",
+
+  "talent_up_guide": [
+    {
+      "name": "Normal Attack",
+      "image": "/img/skills/normal_attack.png"
+    },
+    {
+      "name": "Elemental Skill",
+      "image": "/img/skills/elemental_skill.png"
+    },
+    {
+      "name": "Elemental Burst",
+      "image": "/img/skills/elemental_burst.png"
+    }
+  ],
+
+  "best_weapon": [
+    {
+      "name": "Mistsplitter Reforged",
+      "image": "/img/weapons/mistsplitter_reforged.png",
+      "rarity": 5
+    },
+    {
+      "name": "The Black Sword",
+      "image": "/img/weapons/the_black_sword.png",
+      "rarity": 4
+    },
+    {
+      "name": "Amenoma Kageuchi",
+      "image": "/img/weapons/amenoma_kageuchi.png",
+      "rarity": 4
+    },
+    {
+      "name": "Harbinger of Dawn",
+      "image": "/img/weapons/harbinger_of_dawn.png",
+      "rarity": 3
+    }
+  ],
+
+  "material_farming": {
+    "items": [
+      {
+        "name": "Kageuchi",
+        "amount": 999,
+        "image": "/img/materials/kageuchi.png",
+        "rarity": 3
+      },
+      {
+        "name": "Perpetual",
+        "amount": 99,
+        "image": "/img/materials/perpetual.png",
+        "rarity": 4
+      },
+      {
+        "name": "Sakura Bloom",
+        "amount": 99,
+        "image": "/img/materials/sakura_bloom.png",
+        "rarity": 1
+      },
+      {
+        "name": "Azhdaha",
+        "amount": 89,
+        "image": "/img/materials/azhdaha.png",
+        "rarity": 5
+      },
+      {
+        "name": "Ayaka talent",
+        "amount": 99,
+        "image": "/img/materials/ayaka_talent.png",
+        "rarity": 4
+      }
+    ],
+    "total_mora": "420000"
+  },
+
+  "artifact_substats": {
+    "freeze_party": [
+      {
+        "name": "CDM",
+        "icon": "/img/stats/cdm.png"
+      },
+      {
+        "name": "CR",
+        "icon": "/img/stats/cr.png"
+      },
+      {
+        "name": "ATK%",
+        "icon": "/img/stats/atk.png"
+      },
+      {
+        "name": "Cryo DMG",
+        "icon": "/img/stats/cryo_dmg.png"
+      }
+    ],
+    "melt_party": [
+      {
+        "name": "EM",
+        "icon": "/img/stats/em.png"
+      },
+      {
+        "name": "CDM",
+        "icon": "/img/stats/cdm.png"
+      },
+      {
+        "name": "ATK%",
+        "icon": "/img/stats/atk.png"
+      }
+    ]
+  },
+
+  "teams": {
+    "freeze_team": [
+      {
+        "option": 1,
+        "members": ["shenhe", "kokomi", "kazuha", "ayaka"]
+      },
+      {
+        "option": 2,
+        "members": ["diona", "xingqiu", "sucrose", "ayaka"]
+      }
+    ],
+    "melt_team": {
+      "members": ["kazuha", "diona", "bennett", "ayaka"]
+    }
+  },
+
+  "party_image_path": "/img/genshinchar/"
+}

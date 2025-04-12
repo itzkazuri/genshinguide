@@ -1,0 +1,40 @@
+{
+    "character": "Kamisato Ayaka",
+    "element": "Cryo",
+    "talent_up_guide": ["Normal Attack", "Elemental Skill", "Elemental Burst"],
+    "best_weapon": [
+      { "name": "Name Weapon here", "image": "sword1.png" },
+      { "name": "Name Weapon here", "image": "sword2.png" },
+      { "name": "Name Weapon here", "image": "sword3.png" },
+      { "name": "Name Weapon here", "image": "sword4.png" }
+    ],
+    "material_farming": {
+      "talent_books": "Elegance",
+      "boss_material": "Bloodjade Branch",
+      "common_material": "Handguard",
+      "ascension_gem": "Shivada Jade",
+      "local_specialty": "Sakura Bloom",
+      "total_mora": "???" 
+    },
+    "artifact_substats": {
+      "freeze_party": ["CDM/CR", "CDM/CR/ATK%", "ATK%", "Cryo Damage", "CDM/CR"],
+      "melt_party": ["CDM/CR/EM", "CDM/CR/ATK%", "ATK%/EM"]
+    },
+    "teams": {
+      "freeze_team": [
+        {
+          "option": 1,
+          "members": ["shenhe", "kokomi", "kazuha", "ayaka"]
+        },
+        {
+          "option": 2,
+          "members": ["diona", "xingqiu", "sucrose", "ayaka"]
+        }
+      ],
+      "melt_team": {
+        "members": ["kazuha", "diona", "bennett", "ayaka"]
+      }
+    },
+    "party_image_path": "public/img/genshinchar/"
+  }
+  

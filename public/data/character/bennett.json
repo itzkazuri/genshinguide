@@ -1,0 +1,46 @@
+{
+    "name": "Bennett",
+    "element": "Pyro",
+    "weapon": "Sword",
+    "slug": "bennett",
+    "image": "bennett.webp",
+    "rarity": 4,
+    "talentUpGuide": ["Elemental Burst", "Elemental Skill", "Normal Attack"],
+    "bestWeapons": [
+      { "name": "Aquila Favonia", "image": "aquila-favonia.png" },
+      { "name": "Prototype Rancour", "image": "prototype-rancour.png" },
+      { "name": "Festering Desire", "image": "festering-desire.png" }
+    ],
+    "materialFarming": {
+      "talentBooks": "Teachings of Resistance",
+      "bossMaterial": "Dvalin's Plume",
+      "commonMaterial": "Treasure Hoarder Insignia",
+      "ascensionGem": "Agnidus Agate Gemstone",
+      "localSpecialty": "Windwheel Aster",
+      "totalMora": "1500000"
+    },
+    "artifactSubstats": {
+      "supportBuild": ["Energy Recharge", "HP%", "Healing Bonus", "CRIT Rate"],
+      "dpsBuild": ["CRIT DMG", "CRIT Rate", "ATK%", "Pyro DMG Bonus"]
+    },
+    "teams": {
+      "nationalTeam": {
+        "members": ["Xiangling", "Xingqiu", "Chongyun", "Bennett"],
+        "description": "Classic National Team for continuous vaporize/melt synergy with Pyro and Hydro"
+      },
+      "sunfireTeam": {
+        "members": ["Jean", "Bennett", "Kazuha", "Xiangling"],
+        "description": "Sunfire composition using Bennett's Burst and Jean's swirl to spread Pyro"
+      },
+      "overloadTeam": {
+        "members": ["Fischl", "Beidou", "Bennett", "Xinyan"],
+        "description": "Electro-Pyro team for continuous Overload reactions"
+      },
+      "monoPyro": {
+        "members": ["Xiangling", "Klee", "Amber", "Bennett"],
+        "description": "Pure Pyro damage composition with boosted ATK and consistent Pyro application"
+      }
+    },
+    "showcaseVideo": "https://www.youtube.com/watch?v=example_bennett_showcase"
+  }
+  

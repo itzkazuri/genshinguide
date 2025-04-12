@@ -1,0 +1,45 @@
+{
+    "name": "Nahida",
+    "element": "Dendro",
+    "weapon": "Catalyst",
+    "slug": "nahida",
+    "image": "nahida.webp",
+    "rarity": 5,
+    "talentUpGuide": ["Elemental Skill", "Elemental Burst", "Normal Attack"],
+    "bestWeapons": [
+      { "name": "A Thousand Floating Dreams", "image": "a-thousand-floating-dreams.png" },
+      { "name": "Sacrificial Fragments", "image": "sacrificial-fragments.png" }
+    ],
+    "materialFarming": {
+      "talentBooks": "Teachings of Ingenuity",
+      "bossMaterial": "Puppet Strings",
+      "commonMaterial": "Fungal Spores",
+      "ascensionGem": "Nagadus Emerald Gemstone",
+      "localSpecialty": "Kalpalata Lotus",
+      "totalMora": "2092530"
+    },
+    "artifactSubstats": {
+      "dendroReaction": ["Elemental Mastery", "CRIT Rate", "CRIT DMG", "Energy Recharge"],
+      "pureDendro": ["CRIT DMG", "CRIT Rate", "ATK%", "Dendro DMG Bonus"]
+    },
+    "teams": {
+      "bloomPremium": {
+        "members": ["Nilou", "Kokomi", "Collei", "Nahida"],
+        "description": "Maximized bloom reaction team with high HP scaling and Dendro application"
+      },
+      "hyperbloomF2P": {
+        "members": ["Lisa", "Xingqiu", "Kuki Shinobu", "Nahida"],
+        "description": "Accessible Hyperbloom team with strong off-field Electro and Hydro application"
+      },
+      "quickenAggravate": {
+        "members": ["Fischl", "Yae Miko", "Zhongli", "Nahida"],
+        "description": "Electro-Dendro synergy for continuous Aggravate reactions"
+      },
+      "pureDendro": {
+        "members": ["Baizhu", "Kirara", "Collei", "Nahida"],
+        "description": "Mono Dendro team for pure elemental application and control"
+      }
+    },
+    "showcaseVideo": "https://www.youtube.com/watch?v=example_nahida_showcase"
+  }
+  
