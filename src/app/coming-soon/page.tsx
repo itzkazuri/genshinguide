@@ -35,7 +35,7 @@ export default function ComingSoon() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="text-2xl font-bold mr-8">juligenshin</div>
+            <div className="text-2xl font-bold mr-8">genshinguide</div>
             <div className="hidden md:flex items-center gap-6 text-sm">
               <div className="relative group">
                 <button

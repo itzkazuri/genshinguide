@@ -1,9 +1,10 @@
 /* eslint-disable react/react-in-jsx-scope */
-"use client";
+'use client'
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import CharacterCard from "@/Components/CharacterCard";
 import { Menu, X } from "lucide-react";
+import Head from 'next/head';
 
 interface Character {
   name: string;
@@ -12,6 +13,12 @@ interface Character {
   vision: string;
   weapon: string;
 }
+
+// Define metadata for the page (this is handled separately)
+// export const metadata: Metadata = {
+//   title: "Genshin Guide - Character List",
+//   description: "Explore the list of characters in Genshin Impact with detailed guides.",
+// };
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -95,6 +102,12 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#1e1d22] text-white font-sans flex flex-col">
+      <Head>
+                <title>title</title>
+                <meta charSet='utf-8' />
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"></link>
+            </Head>
       <nav
         className={`bg-[#16324c] px-6 py-4 shadow-lg sticky top-0 z-50 transition-all duration-300 ${
           isScrolled ? "bg-opacity-90 scale-[0.98] shadow-xl" : "bg-opacity-100"
@@ -109,7 +122,7 @@ export default function Home() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="text-2xl font-bold mr-8">juligenshin</div>
+            <div className="text-2xl font-bold mr-8">genshinguide</div>
             <div className="hidden md:flex items-center gap-6 text-sm">
               <div className="relative group">
                 <button
@@ -119,7 +132,7 @@ export default function Home() {
                   Guide
                 </button>
                 {isGuideDropdownOpen && (
-                  <div className="absolute left-0 bg-[#  shadow-lg p-2 rounded mt-2 w-32 animate-fadeIn">
+                  <div className="absolute left-0 bg-[#1e1d22] shadow-lg p-2 rounded mt-2 w-32 animate-fadeIn">
                     <Link
                       href="/"
                       className="block px-4 py-2 hover:bg-[#2a2a2e] rounded transition duration-200"
@@ -283,27 +296,26 @@ export default function Home() {
           </div>
         </div>
 
-        
-<div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 px-2 sm:px-4">
-  {filteredCharacters.length === 0 ? (
-    <div className="col-span-full text-center text-base text-gray-400">
-      Character Not Found.
-    </div>
-  ) : (
-    filteredCharacters.map((character, index) => (
-      <Link key={index} href={`/character/${slugify(character.name)}`}>
-        <div className="transform transition duration-200 hover:scale-105 hover:shadow-lg">
-          <CharacterCard
-            name={character.name}
-            image={character.image}
-            rarity={character.rarity}
-            vision={character.vision} // Tambahkan prop vision
-          />
+        <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 px-2 sm:px-4">
+          {filteredCharacters.length === 0 ? (
+            <div className="col-span-full text-center text-base text-gray-400">
+              Character Not Found.
+            </div>
+          ) : (
+            filteredCharacters.map((character, index) => (
+              <Link key={index} href={`/character/${slugify(character.name)}`}>
+                <div className="transform transition duration-200 hover:scale-105 hover:shadow-lg">
+                  <CharacterCard
+                    name={character.name}
+                    image={character.image}
+                    rarity={character.rarity}
+                    vision={character.vision}
+                  />
+                </div>
+              </Link>
+            ))
+          )}
         </div>
-      </Link>
-    ))
-  )}
-</div>
       </main>
 
       <footer className="bg-[#16324c] text-white py-8 mt-12">

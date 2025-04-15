@@ -1,0 +1,47 @@
+{
+    "name": "Furina",
+    "element": "Hydro",
+    "weapon": "Sword",
+    "slug": "furina",
+    "image": "furina.webp",
+    "rarity": 5,
+    "talentUpGuide": ["Elemental Skill", "Elemental Burst", "Normal Attack"],
+    "bestWeapons": [
+      { "name": "Splendor of Tranquil Waters", "image": "splendor-of-tranquil-waters.png" },
+      { "name": "Primordial Jade Cutter", "image": "primordial-jade-cutter.png" },
+      { "name": "Festering Desire", "image": "festering-desire.png" },
+      { "name": "Harbinger of Dawn", "image": "harbinger-of-dawn.png" }
+    ],
+    "materialFarming": {
+      "talentBooks": "Teachings of Justice",
+      "bossMaterial": "Lightless Mass",
+      "commonMaterial": "Whopperflower Nectar",
+      "ascensionGem": "Varunada Lazurite Gemstone",
+      "localSpecialty": "Lakelight Lily",
+      "totalMora": "2092530"
+    },
+    "artifactTypes": {
+      "supportBuild": ["Golden Troupe (4)"],
+      "hybridBuild": ["Golden Troupe (2)", "Noblesse Oblige (2)"]
+    },
+    "artifactSubstats": {
+      "supportBuild": ["Energy Recharge", "HP%", "CRIT Rate", "CRIT DMG", "Hydro DMG Bonus"],
+      "hybridBuild": ["HP%", "Energy Recharge", "CRIT Rate", "CRIT DMG"]
+    },
+    "teams": {
+      "balancedTeam": {
+        "members": ["Furina", "Neuvillette", "Baizhu", "Kazuha"],
+        "description": "Tim seimbang dengan Furina sebagai buffer dan Neuvillette sebagai DPS utama."
+      },
+      "f2pFriendly": {
+        "members": ["Furina", "Barbara", "Xiangling", "Sucrose"],
+        "description": "Komposisi tim ramah F2P dengan sinergi antara Hydro dan Pyro."
+      },
+      "monoHydro": {
+        "members": ["Furina", "Yelan", "Xingqiu", "Kokomi"],
+        "description": "Tim Mono-Hydro yang memaksimalkan reaksi dan damage Hydro."
+      }
+    },
+    "showcaseVideo": "https://www.youtube.com/watch?v=uejUPen92mQ"
+  }
+  

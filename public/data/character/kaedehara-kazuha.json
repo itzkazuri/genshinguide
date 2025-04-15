@@ -1,0 +1,44 @@
+{
+    "name": "Kaedehara Kazuha",
+    "element": "Anemo",
+    "weapon": "Sword",
+    "slug": "kaedehara-kazuha",
+    "image": "kazuha.webp",
+    "rarity": 5,
+    "talentUpGuide": ["Elemental Skill", "Elemental Burst", "Normal Attack"],
+    "bestWeapons": [
+      { "name": "Freedom-Sworn", "image": "freedom-sworn.png" },
+      { "name": "Xiphos' Moonlight", "image": "xiphos-moonlight.png" },
+      { "name": "Iron Sting", "image": "iron-sting.png" }
+    ],
+    "materialFarming": {
+      "talentBooks": "Teachings of Diligence",
+      "bossMaterial": "Gilded Scale",
+      "commonMaterial": "Treasure Hoarder Insignia",
+      "ascensionGem": "Vayuda Turquoise Gemstone",
+      "localSpecialty": "Sea Ganoderma",
+      "totalMora": "2092530"
+    },
+    "artifactTypes": {
+      "supportBuild": ["Viridescent Venerer (4)"]
+    },
+    "artifactSubstats": {
+      "supportBuild": ["Elemental Mastery", "Energy Recharge", "CRIT Rate", "CRIT DMG"]
+    },
+    "teams": {
+      "nationalTeam": {
+        "members": ["Kazuha", "Bennett", "Xiangling", "Xingqiu"],
+        "description": "Tim meta dengan reaksi Overload dan Vaporize, Kazuha berperan sebagai buffer dan crowd control."
+      },
+      "hyperbloomTeam": {
+        "members": ["Kazuha", "Nahida", "Raiden Shogun", "Yelan"],
+        "description": "Tim Hyperbloom yang memanfaatkan grouping dan Elemental Mastery Kazuha."
+      },
+      "freezeTeam": {
+        "members": ["Kazuha", "Ayaka", "Shenhe", "Kokomi"],
+        "description": "Tim Freeze premium dengan crowd control dari Kazuha."
+      }
+    },
+    "showcaseVideo": "https://www.youtube.com/watch?v=7TtRwtazl_g"
+  }
+  

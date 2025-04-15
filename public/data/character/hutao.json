@@ -1,0 +1,47 @@
+{
+    "name": "Hu Tao",
+    "element": "Pyro",
+    "weapon": "Polearm",
+    "slug": "hu-tao",
+    "image": "hutao.webp",
+    "rarity": 5,
+    "talentUpGuide": ["Elemental Skill", "Elemental Burst", "Normal Attack"],
+    "bestWeapons": [
+      { "name": "Staff of Homa", "image": "staff-of-homa.png" },
+      { "name": "Dragon's Bane", "image": "dragons-bane.png" },
+      { "name": "Deathmatch", "image": "deathmatch.png" },
+      { "name": "Blackcliff Pole", "image": "blackcliff-pole.png" }
+    ],
+    "materialFarming": {
+      "talentBooks": "Teachings of Diligence",
+      "bossMaterial": "Shard of a Foul Legacy",
+      "commonMaterial": "Whopperflower Nectar",
+      "ascensionGem": "Agnidus Agate Gemstone",
+      "localSpecialty": "Silk Flower",
+      "totalMora": "2092530"
+    },
+    "artifactTypes": {
+      "vaporizeBuild": ["Crimson Witch of Flames (4)"],
+      "shimenawaBuild": ["Shimenawa's Reminiscence (4)"]
+    },
+    "artifactSubstats": {
+      "vaporizeBuild": ["CRIT DMG", "CRIT Rate", "HP%", "Pyro DMG Bonus", "Elemental Mastery"],
+      "shimenawaBuild": ["CRIT DMG", "CRIT Rate", "HP%", "ATK%", "Elemental Mastery"]
+    },
+    "teams": {
+      "vaporizeTeam": {
+        "members": ["HutTao", "Xingqiu", "Zhongli", "Albedo"],
+        "description": "Tim Vaporize dengan Hu Tao sebagai DPS utama, Xingqiu untuk aplikasi Hydro, Zhongli sebagai shield, dan Albedo untuk sub-DPS Geo."
+      },
+      "doubleHydroTeam": {
+        "members": ["HuTao", "Yelan", "Xingqiu", "Zhongli"],
+        "description": "Tim Double Hydro yang memaksimalkan reaksi Vaporize dengan Yelan dan Xingqiu, serta perlindungan dari Zhongli."
+      },
+      "f2pFriendly": {
+        "members": ["HuTao", "Barbara", "Sucrose", "Xiangling"],
+        "description": "Komposisi tim ramah F2P dengan Barbara sebagai healer, Sucrose untuk crowd control, dan Xiangling sebagai sub-DPS Pyro."
+      }
+    },
+    "showcaseVideo": "https://www.youtube.com/watch?v=dixB9RD6Cmg"
+  }
+  

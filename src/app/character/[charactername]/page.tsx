@@ -181,7 +181,7 @@ export default function CharacterDetailPage() {
               sizeClass="w-10 h-10"
               className="rounded-full mr-4 border-2 border-gray-600"
             />
-            <div className="text-2xl font-bold mr-8">juligenshin</div>
+            <div className="text-2xl font-bold mr-8">genshinguide</div>
             <div className="hidden md:flex items-center gap-6 text-sm">
               <Link href="/" className="hover:text-blue-300">
                 Character

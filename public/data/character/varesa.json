@@ -1,0 +1,42 @@
+{
+    "name": "Varesa",
+    "element": "Electro",
+    "weapon": "Catalyst",
+    "slug": "varesa",
+    "image": "varesa.webp",
+    "rarity": 5,
+    "talentUpGuide": ["Elemental Burst", "Elemental Skill", "Normal Attack"],
+    "bestWeapons": [
+      { "name": "Vivid Notions", "image": "vivid-notions.png" },
+      { "name": "Tome of the Eternal Flow", "image": "tome-of-the-eternal-flow.png" },
+      { "name": "Surf's Up", "image": "surfs-up.png" },
+      { "name": "Kagura's Verity", "image": "kaguras-verity.png" },
+      { "name": "The Widsith", "image": "the-widsith.png" }
+    ],
+    "materialFarming": {
+      "talentBooks": "Teachings of Conflict",
+      "bossMaterial": "Eroded Scale Feather",
+      "commonMaterial": "Sparkless Statue Core",
+      "ascensionGem": "Vajrada Amethyst Gemstone",
+      "localSpecialty": "Skysplit Gembloom",
+      "totalMora": "2092530"
+    },
+    "artifactTypes": {
+      "mainDPS": ["Obsidian Codex (4)", "Long Night's Oath (4)"]
+    },
+    "artifactSubstats": {
+      "mainDPS": ["CRIT Rate", "CRIT DMG", "ATK%", "Electro DMG Bonus", "Energy Recharge"]
+    },
+    "teams": {
+      "overloadTeam": {
+        "members": ["Varesa", "Mavuika", "Chevreuse", "Iansan"],
+        "description": "Tim Overload yang memanfaatkan sinergi antara Electro dan Pyro untuk menghasilkan damage area yang besar."
+      },
+      "standardTeam": {
+        "members": ["Varesa", "Furina", "Xianyun", "Iansan"],
+        "description": "Komposisi tim seimbang dengan dukungan dari karakter Hydro dan Anemo untuk fleksibilitas dalam pertempuran."
+      }
+    },
+    "showcaseVideo": "https://www.youtube.com/watch?v=vgdhWQ5aL0s"
+  }
+  

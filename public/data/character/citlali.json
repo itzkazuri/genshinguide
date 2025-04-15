@@ -1,0 +1,49 @@
+{
+    "name": "Citlali",
+    "element": "Cryo",
+    "weapon": "Catalyst",
+    "slug": "citlali",
+    "image": "citlali.webp",
+    "rarity": 5,
+    "talentUpGuide": ["Elemental Skill", "Elemental Burst", "Normal Attack"],
+    "bestWeapons": [
+      { "name": "Starcaller's Watch", "image": "starcallers-watch.png" },
+      { "name": "Sacrificial Fragments", "image": "sacrificial-fragments.png" },
+      { "name": "Mappa Mare", "image": "mappa-mare.png" },
+      { "name": "Thrilling Tales of Dragon Slayers", "image": "thrilling-tales-of-dragon-slayers.png" }
+    ],
+    "materialFarming": {
+      "talentBooks": "Teachings of Justice",
+      "bossMaterial": "Lightless Mass",
+      "commonMaterial": "Whopperflower Nectar",
+      "ascensionGem": "Shivada Jade Gemstone",
+      "localSpecialty": "Lakelight Lily",
+      "totalMora": "2092530"
+    },
+    "artifactTypes": {
+      "supportBuild": ["Noblesse Oblige (4)"],
+      "freezeBuild": ["Blizzard Strayer (4)"],
+      "meltBuild": ["Gilded Dreams (4)"]
+    },
+    "artifactSubstats": {
+      "supportBuild": ["HP%", "Energy Recharge", "Elemental Mastery", "CRIT Rate", "CRIT DMG"],
+      "freezeBuild": ["Elemental Mastery", "Energy Recharge", "CRIT Rate", "CRIT DMG"],
+      "meltBuild": ["Elemental Mastery", "Energy Recharge", "CRIT Rate", "CRIT DMG"]
+    },
+    "teams": {
+      "freezeTeam": {
+        "members": ["Citlali", "Ayaka", "Shenhe", "Kokomi"],
+        "description": "Tim Freeze yang memanfaatkan aplikasi Cryo dari Citlali untuk menjaga musuh dalam keadaan beku."
+      },
+      "meltTeam": {
+        "members": ["Citlali", "Diluc", "Bennett", "Sucrose"],
+        "description": "Komposisi tim Melt dengan Citlali sebagai pendukung Cryo untuk reaksi Melt yang kuat."
+      },
+      "supportTeam": {
+        "members": ["Citlali", "Hu Tao", "Xingqiu", "Zhongli"],
+        "description": "Citlali memberikan dukungan melalui shield dan debuff, memperkuat DPS utama."
+      }
+    },
+    "showcaseVideo": "https://www.youtube.com/watch?v=wTZ5Xe0RHYM"
+  }
+  
