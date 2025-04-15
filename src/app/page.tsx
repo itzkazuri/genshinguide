@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -282,25 +283,27 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 px-2 sm:px-4">
-          {filteredCharacters.length === 0 ? (
-            <div className="col-span-full text-center text-base text-gray-400">
-              Character Not Found.
-            </div>
-          ) : (
-            filteredCharacters.map((character, index) => (
-              <Link key={index} href={`/character/${slugify(character.name)}`}>
-                <div className="transform transition duration-200 hover:scale-105 hover:shadow-lg">
-                  <CharacterCard
-                    name={character.name}
-                    image={character.image}
-                    rarity={character.rarity}
-                  />
-                </div>
-              </Link>
-            ))
-          )}
+        
+<div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 px-2 sm:px-4">
+  {filteredCharacters.length === 0 ? (
+    <div className="col-span-full text-center text-base text-gray-400">
+      Character Not Found.
+    </div>
+  ) : (
+    filteredCharacters.map((character, index) => (
+      <Link key={index} href={`/character/${slugify(character.name)}`}>
+        <div className="transform transition duration-200 hover:scale-105 hover:shadow-lg">
+          <CharacterCard
+            name={character.name}
+            image={character.image}
+            rarity={character.rarity}
+            vision={character.vision} // Tambahkan prop vision
+          />
         </div>
+      </Link>
+    ))
+  )}
+</div>
       </main>
 
       <footer className="bg-[#16324c] text-white py-8 mt-12">

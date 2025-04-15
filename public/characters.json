@@ -209,7 +209,7 @@
     },
     {
         "name": "Eula",
-        "image": "img/genshinchar/elua.webp",
+        "image": "img/genshinchar/eula.webp",
         "rarity": 5,
         "releaseDate": "2021-05-18",
         "vision": "Cryo",
@@ -378,7 +378,7 @@
     },
     {
         "name": "Kujou Sara",
-        "image": "img/genshinchar/kujou.webp",
+        "image": "img/genshinchar/sara.webp",
         "rarity": 4,
         "releaseDate": "2021-09-01",
         "vision": "Electro",
@@ -466,7 +466,7 @@
     },
     {
         "name": "Neuvillette",
-        "image": "img/genshinchar/neuvillete.webp",
+        "image": "img/genshinchar/Neuvillette.webp",
         "rarity": 5,
         "releaseDate": "2023-09-27",
         "vision": "Hydro",
@@ -578,7 +578,7 @@
     },
     {
         "name": "Travleer (anemo)",
-        "image": "img/genshinchar/tabibito.webp",
+        "image": "img/genshinchar/traveler.webp",
         "rarity": 5,
         "releaseDate": "2020-09-28",
         "vision": "anemo",
@@ -586,7 +586,7 @@
     },
     {
         "name": "Traveler (geo)",
-        "image": "img/genshinchar/tabibito.webp",
+        "image": "img/genshinchar/traveler.webp",
         "rarity": 5,
         "releaseDate": "2020-09-28",
         "vision": "Geo",
@@ -594,7 +594,7 @@
     },
     {
         "name": "Traveler (electro)",
-        "image": "img/genshinchar/tabibito.webp",
+        "image": "img/genshinchar/traveler.webp",
         "rarity": 5,
         "releaseDate": "2020-09-28",
         "vision": "Electro",
@@ -602,7 +602,7 @@
     },
     {
         "name": "Traveler (dendro)",
-        "image": "img/genshinchar/tabibito.webp",
+        "image": "img/genshinchar/traveler.webp",
         "rarity": 5,
         "releaseDate": "2020-09-28",
         "vision": "Dendro",
@@ -610,7 +610,7 @@
     },
     {
         "name": "Traveler (hydro)",
-        "image": "img/genshinchar/tabibito.webp",
+        "image": "img/genshinchar/traveler.webp",
         "rarity": 5,
         "releaseDate": "2020-09-28",
         "vision": "Hydro",
@@ -618,7 +618,7 @@
     },
     {
         "name": "Traveler (pyro)",
-        "image": "img/genshinchar/tabibito.webp",
+        "image": "img/genshinchar/traveler.webp",
         "rarity": 5,
         "releaseDate": "2020-09-28",
         "vision": "Pyro",
@@ -650,16 +650,16 @@
         "weapon": "Bow"
     },
     {
-        "name": "Varessa",
-        "image": "img/genshinchar/varessa.webp",
+        "name": "Varesa",
+        "image": "img/genshinchar/varesa.webp",
         "rarity": 5,
         "releaseDate": "2025-03-26",
         "vision": "Electro",
         "weapon": "Catalyst"
     },
     {
-        "name": "Wriothesley",
-        "image": "img/genshinchar/wrio.webp",
+        "name": "wriothesley",
+        "image": "img/genshinchar/wriothesley.webp",
         "rarity": 5,
         "releaseDate": "2023-09-27",
         "vision": "Cryo",
@@ -755,7 +755,7 @@
     },
     {
         "name": "Yun Jin",
-        "image": "img/genshinchar/yunjin.webp",
+        "image": "img/genshinchar/yun_jin.webp",
         "rarity": 4,
         "releaseDate": "2022-01-05",
         "vision": "Geo",

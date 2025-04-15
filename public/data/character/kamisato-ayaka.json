@@ -5,7 +5,7 @@
   "slug": "kamisato-ayaka",
   "image": "ayaka.webp",
   "rarity": 5,
-  "talentUpGuide": ["Elemental Skill", "Elemental Burst", "Normal Attack"],
+  "talentUpGuide": ["Elemental Burst", "Elemental Skill", "Normal Attack"],  
   "bestWeapons": [
     { "name": "Mistsplitter Reforged", "image": "mistsplitter-reforged.png" },
     { "name": "Amenoma Kageuchi", "image": "amenoma-kageuchi.png" }
@@ -17,6 +17,10 @@
     "ascensionGem": "Shivada Jade Gemstone",
     "localSpecialty": "Sakura Bloom",
     "totalMora": "2092530"
+  },
+  "artifactTypes": {
+    "freezeParty": ["Blizzard Strayer (4)"],
+    "meltParty": ["Gladiator's Finale (2)", "Shimenawa's Reminiscence (2)"]
   },
   "artifactSubstats": {
     "freezeParty": ["CRIT DMG", "CRIT Rate", "ATK%", "Cryo DMG Bonus", "Energy Recharge"],
