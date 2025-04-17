@@ -40,7 +40,7 @@
         "description": "Komposisi tim Melt dengan Citlali sebagai pendukung Cryo untuk reaksi Melt yang kuat."
       },
       "supportTeam": {
-        "members": ["Citlali", "Hu Tao", "Xingqiu", "Zhongli"],
+        "members": ["Citlali", "HuTao", "Xingqiu", "Zhongli"],
         "description": "Citlali memberikan dukungan melalui shield dan debuff, memperkuat DPS utama."
       }
     },

@@ -1,0 +1,47 @@
+{
+    "name": "Ganyu",
+    "element": "Cryo",
+    "weapon": "Bow",
+    "slug": "ganyu",
+    "image": "ganyu.webp",
+    "rarity": 5,
+    "talentUpGuide": ["Normal Attack", "Elemental Burst", "Elemental Skill"],
+    "bestWeapons": [
+      { "name": "Amos' Bow", "image": "amos-bow.png" },
+      { "name": "Aqua Simulacra", "image": "aqua-simulacra.png" },
+      { "name": "Prototype Crescent", "image": "prototype-crescent.png" },
+      { "name": "Hamayumi", "image": "hamayumi.png" }
+    ],
+    "materialFarming": {
+      "talentBooks": "Teachings of Diligence",
+      "bossMaterial": "Shadow of the Warrior",
+      "commonMaterial": "Whopperflower Nectar",
+      "ascensionGem": "Shivada Jade Gemstone",
+      "localSpecialty": "Qingxin",
+      "totalMora": "2092530"
+    },
+    "artifactTypes": {
+      "freezeBuild": ["Blizzard Strayer (4)"],
+      "meltBuild": ["Wanderer's Troupe (4)"]
+    },
+    "artifactSubstats": {
+      "freezeBuild": ["CRIT DMG", "CRIT Rate", "ATK%", "Energy Recharge"],
+      "meltBuild": ["CRIT DMG", "CRIT Rate", "ATK%", "Elemental Mastery"]
+    },
+    "teams": {
+      "freezeTeam": {
+        "members": ["Ganyu", "Mona", "Venti", "Diona"],
+        "description": "Tim Freeze premium memanfaatkan crowd control dari Venti dan damage besar dari Ganyu."
+      },
+      "meltTeam": {
+        "members": ["Ganyu", "Bennett", "Xiangling", "Zhongli"],
+        "description": "Komposisi Melt untuk burst damage tinggi dengan Pyro resonance."
+      },
+      "supportTeam": {
+        "members": ["Ganyu", "Ayaka", "Kokomi", "Kazuha"],
+        "description": "Ganyu sebagai sub-DPS dan Burst support, mendukung Cryo resonance serta control area."
+      }
+    },
+    "showcaseVideo": "https://www.youtube.com/watch?v=dx9hbS4cwRM"
+  }
+  

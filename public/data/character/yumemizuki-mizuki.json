@@ -1,0 +1,47 @@
+{
+    "name": "Yumemizuki Mizuki",
+    "element": "Anemo",
+    "weapon": "Catalyst",
+    "slug": "yumemizuki-mizuki",
+    "image": "mizuki.webp",
+    "rarity": 5,
+    "talentUpGuide": ["Elemental Skill", "Elemental Burst", "Normal Attack"],
+    "bestWeapons": [
+      { "name": "Skyward Atlas", "image": "skyward-atlas.png" },
+      { "name": "Sacrificial Fragments", "image": "sacrificial-fragments.png" },
+      { "name": "Mappa Mare", "image": "mappa-mare.png" },
+      { "name": "Thrilling Tales of Dragon Slayers", "image": "thrilling-tales-of-dragon-slayers.png" }
+    ],
+    "materialFarming": {
+      "talentBooks": "Teachings of Diligence",
+      "bossMaterial": "Lightless Mass",
+      "commonMaterial": "Whopperflower Nectar",
+      "ascensionGem": "Vayuda Turquoise Gemstone",
+      "localSpecialty": "Sea Ganoderma",
+      "totalMora": "2092530"
+    },
+    "artifactTypes": {
+      "swirlBuild": ["Viridescent Venerer (4)"],
+      "supportBuild": ["Noblesse Oblige (4)"]
+    },
+    "artifactSubstats": {
+      "swirlBuild": ["Elemental Mastery", "Energy Recharge", "CRIT Rate", "CRIT DMG"],
+      "supportBuild": ["HP%", "Energy Recharge", "Elemental Mastery", "CRIT Rate", "CRIT DMG"]
+    },
+    "teams": {
+      "swirlTeam": {
+        "members": ["Mizuki", "Xiangling", "Bennett", "Xingqiu"],
+        "description": "Tim Swirl dengan reaksi Pyro dan Hydro untuk damage area yang luas."
+      },
+      "supportTeam": {
+        "members": ["Mizuki", "Hutao", "Yelan", "Zhongli"],
+        "description": "Mizuki memberikan buff dan healing, mendukung DPS utama dalam tim."
+      },
+      "freezeTeam": {
+        "members": ["Mizuki", "Ayaka", "Shenhe", "Kokomi"],
+        "description": "Tim Freeze yang memanfaatkan aplikasi Cryo dan kontrol area dari Mizuki."
+      }
+    },
+    "showcaseVideo": "https://www.youtube.com/watch?v=wi_aD8zDCu0"
+  }
+  

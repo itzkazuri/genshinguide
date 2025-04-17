@@ -158,13 +158,7 @@ export default function CharacterDetailPage() {
       )
       .trim();
 
-  const getCharacterElement = (name: string) =>
-    ({
-      varesa: "Electro",
-      diluc: "Pyro",
-      kokomi: "Hydro",
-      ayaka: "Cryo",
-    }[name.toLowerCase()] || "Unknown");
+  
 
   return (
     <div className="min-h-screen bg-[#1e1d22] text-white font-sans flex flex-col">
@@ -435,7 +429,7 @@ export default function CharacterDetailPage() {
                             key={idx}
                             src={`/img/genshinchar/${member.toLowerCase()}.webp`}
                             alt={member}
-                            element={getCharacterElement(member)}
+          
                           />
                         ))}
                       </div>

@@ -53,7 +53,7 @@ export default function ComingSoon() {
                       Character
                     </Link>
                     <Link
-                      href="/coming-soon"
+                      href="/your-stat"
                       className="block px-4 py-2 hover:bg-[#2a2a2e] rounded transition duration-200"
                     >
                       Your Stat

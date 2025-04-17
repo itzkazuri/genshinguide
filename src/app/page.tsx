@@ -6,6 +6,7 @@ import CharacterCard from "@/Components/CharacterCard";
 import { Menu, X } from "lucide-react";
 import Head from 'next/head';
 
+
 interface Character {
   name: string;
   image: string;
@@ -140,7 +141,7 @@ export default function Home() {
                       Character
                     </Link>
                     <Link
-                      href="/coming-soon"
+                      href="/your-stat"
                       className="block px-4 py-2 hover:bg-[#2a2a2e] rounded transition duration-200"
                     >
                       Your Stat
