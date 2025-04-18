@@ -6,54 +6,6 @@ import Link from "next/link";
 import Head from "next/head";
 import { Menu, X } from "lucide-react";
 
-// Dummy data for player stats
-const dummyStats = {
-  playerId: "123456789",
-  username: "TravelerLumine",
-  adventureRank: 60,
-  worldLevel: 8,
-  achievements: 520,
-  spiralAbyss: "12-3",
-  characters: [
-    {
-      name: "Ayaka",
-      level: 90,
-      constellation: 4,
-      weapon: "Mistsplitter Reforged",
-      buildQuality: "Well Built",
-      buildIcon: "✅",
-    },
-    {
-      name: "Raiden",
-      level: 85,
-      constellation: 2,
-      weapon: "Engulfing Lightning",
-      buildQuality: "Average",
-      buildIcon: "⚠️",
-    },
-    {
-      name: "Keqing",
-      level: 80,
-      constellation: 1,
-      weapon: "Lion's Roar",
-      buildQuality: "Needs Improvement",
-      buildIcon: "❌",
-    },
-  ],
-};
-
-// Dummy IP lookup function
-async function fetchPlayerIP(playerId: string): Promise<string> {
-  await new Promise((resolve) => setTimeout(resolve, 1000));
-  return "192.168.1.100"; // Dummy IP
-}
-
-// Dummy stats fetch function
-async function fetchPlayerStats(playerId: string) {
-  await new Promise((resolve) => setTimeout(resolve, 1000));
-  return dummyStats;
-}
-
 const ImageWithFallback = ({
   src,
   alt,
@@ -110,10 +62,13 @@ export default function YourStat() {
     setIsLoading(true);
     setError("");
     try {
-      const ip = await fetchPlayerIP(playerId);
-      const statsData = await fetchPlayerStats(playerId);
-      setPlayerIP(ip);
-      setStats(statsData);
+      const response = await fetch(`/api/fetchPlayer?playerId=${playerId}`);
+      const data = await response.json();
+      if (data.error) {
+        throw new Error(data.error);
+      }
+      setPlayerIP(data.ip); // Will be "N/A"
+      setStats(data.stats);
     } catch (err) {
       setError("Failed to fetch player data. Please try again.");
     } finally {
@@ -191,15 +146,15 @@ export default function YourStat() {
       </nav>
 
       {/* Main Content */}
-      <main className="max-w-6xl mx-auto px-4 py-8 md:px-6 md:py-12">
-        <div className="bg-[#252529] rounded-2xl shadow-xl p-6 md:p-8">
+      <main className="max-w-6xl mx-auto px-4 py-8 md:px-6 md:py-12 flex-grow">
+      <div className="bg-[#252529] rounded-2xl shadow-xl p-6 md:p-8">
           <h1 className="text-3xl md:text-4xl font-bold mb-8 text-center animate-fadeIn">
             Your Genshin Impact Stats
           </h1>
 
           {/* Player ID Search */}
           <div className="text-center mb-12 animate-fadeIn delay-100">
-            <p className="text-lg mb-4">Enter your Player ID to view your game statistics and IP information.</p>
+            <p className="text-lg mb-4">Enter your Player ID to view your game statistics.</p>
             <div className="flex justify-center gap-4 max-w-md mx-auto">
               <input
                 type="text"
@@ -237,7 +192,6 @@ export default function YourStat() {
                       <p><strong>Player ID:</strong> {stats.playerId}</p>
                       <p><strong>Adventure Rank:</strong> {stats.adventureRank}</p>
                       <p><strong>World Level:</strong> {stats.worldLevel}</p>
-                      <p><strong>Player IP:</strong> {playerIP}</p>
                       <p><strong>Achievements:</strong> {stats.achievements}</p>
                       <p><strong>Spiral Abyss:</strong> {stats.spiralAbyss}</p>
                     </div>
@@ -249,9 +203,10 @@ export default function YourStat() {
               <Section title="Character Builds">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {stats.characters.map((char: any, index: number) => (
-                    <div
+                    <Link
                       key={index}
-                      className="bg-[#2a2a36] rounded-xl p-5 border border-gray-600 hover:shadow-xl"
+                      href={`/character/${char.name.toLowerCase()}`}
+                      className="bg-[#2a2a36] rounded-xl p-5 border border-gray-600 hover:shadow-xl transition duration-300 hover:-translate-y-1 group"
                     >
                       <div className="flex items-center gap-4 mb-4">
                         <ImageWithFallback
@@ -261,18 +216,16 @@ export default function YourStat() {
                           className="rounded-full"
                         />
                         <div>
-                          <h4 className="text-lg font-semibold text-blue-300">{char.name}</h4>
+                          <h4 className="text-lg font-semibold text-blue-300 group-hover:text-blue-400">{char.name}</h4>
                           <p className="text-sm text-gray-400">Level: {char.level}</p>
                         </div>
                       </div>
-                      <div className="space-y-2">
+                      <div className="space-y-2 text-sm">
                         <p><strong>Constellation:</strong> {char.constellation}</p>
                         <p><strong>Weapon:</strong> {char.weapon}</p>
-                        <p>
-                          <strong>Build Quality:</strong> {char.buildIcon} {char.buildQuality}
-                        </p>
+                        <p><strong>Build Quality:</strong> {char.buildIcon} {char.buildQuality}</p>
                       </div>
-                    </div>
+                    </Link>
                   ))}
                 </div>
               </Section>
@@ -282,8 +235,8 @@ export default function YourStat() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-[#16324c] text-white py-8 mt-12">
-        <div className="max-w-4xl mx-auto flex flex-col items-center gap-6">
+      <footer className="bg-[#16324c] text-white py-8 w-full">
+      <div className="max-w-4xl mx-auto flex flex-col items-center gap-6">
           <div className="flex justify-center gap-6">
             {[
               { href: "https://facebook.com/kadekjuli", icon: "/facebook-icon.png", alt: "Facebook" },

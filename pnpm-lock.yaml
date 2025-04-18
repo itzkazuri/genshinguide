@@ -14,6 +14,9 @@ importers:
       axios:
         specifier: ^1.8.4
         version: 1.8.4
+      enkanetwork:
+        specifier: 3.0.0-beta5
+        version: 3.0.0-beta5
       lucide-react:
         specifier: ^0.487.0
         version: 0.487.0(react@19.1.0)
@@ -771,6 +774,9 @@ packages:
   enhanced-resolve@5.18.1:
     resolution: {integrity: sha512-ZSW3ma5GkcQBIpwZTSRAI8N71Uuwgs93IezB7mf7R60tC8ZbJideoDNKjHn2O9KIlx6rkGTTEk1xUCK2E1Y2Yg==}
     engines: {node: '>=10.13.0'}
+
+  enkanetwork@3.0.0-beta5:
+    resolution: {integrity: sha512-j5MR5y+D2OBDRM79CO8Zvq4+MdsIkpdb6pQDf1TQRbt1U49/HW9q0l+I0u98ItWCxmp95l1aOAAdguZLRBcsxA==}
 
   es-abstract@1.23.9:
     resolution: {integrity: sha512-py07lI0wjxAC/DcfK1S6G7iANonniZwTISvdPzk9hzeH0IZIshbuuFxLIU96OyF89Yb9hiqWn8M/bY83KY5vzA==}
@@ -2431,6 +2437,8 @@ snapshots:
     dependencies:
       graceful-fs: 4.2.11
       tapable: 2.2.1
+
+  enkanetwork@3.0.0-beta5: {}
 
   es-abstract@1.23.9:
     dependencies:
