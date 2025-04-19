@@ -27,7 +27,7 @@ Built with `create-next-app` and using modern web technologies like **Tailwind C
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/genshin-guide.git
+https://github.com/itzkazuri/genshinguide.git
 cd genshin-guide
 ```
 
