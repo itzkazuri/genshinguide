@@ -1,8 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+---
 
-First, run the development server:
+```md
+# 🌸 Genshin Impact Guide Website
+
+This is an open-source [Next.js](https://nextjs.org/) project that serves as a modular and visually appealing **Genshin Impact Guide Website**, featuring detailed character info, weapons, artifacts, and more — all powered by clean, JSON-based data.
+
+Built with `create-next-app` and using modern web technologies like **Tailwind CSS**, **TypeScript**, and **App Router**.
+
+---
+
+## 🚀 Features
+
+- Modular JSON data for easy scalability (characters, weapons, artifacts, substats, etc.)
+- Filter system by **element**, **rarity**, and **weapon type**
+- Responsive and dark-themed UI
+- Per-character detail pages
+- Optimized font loading using Poppins via `next/font`
+- Multi-language support (planned)
+- Ready for deployment on Vercel
+
+---
+
+## 🛠️ Installation & Development
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/genshin-guide.git
+cd genshin-guide
+```
+
+### 2. Install dependencies
+
+Choose your preferred package manager:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+### 3. Start the development server
 
 ```bash
 npm run dev
@@ -14,23 +57,70 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Once started, open [http://localhost:3000](http://localhost:3000) in your browser to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧩 Project Structure (Simplified)
 
-## Learn More
+```
+src/
+├── app/
+│   ├── characther/              # Character list & filter
+│   │   └── [characthername]/    # Dynamic detail page
+│   └── layout.tsx               # Global layout
+├── components/                  # Reusable UI components
+├── data/                        # Types and interfaces
+├── public/
+│   └── data/
+│       ├── character/           # JSON per character
+│       ├── weapon/              # Weapon data
+│       └── resource/            # Resource icons
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🧠 Editing the Project
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+You can start modifying the homepage by editing:
 
-## Deploy on Vercel
+```
+app/page.tsx
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The page will auto-update as you edit the file.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📚 Learn More
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [TypeScript Handbook](https://www.typescriptlang.org/docs/)
+- [Vercel Deployment Guide](https://nextjs.org/docs/app/building-your-application/deploying)
+
+---
+
+## 🚀 Deploy on Vercel
+
+This project is fully compatible with [Vercel](https://vercel.com/) for fast and easy deployment.
+
+Deploy instantly with:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app)
+
+---
+
+## 🙌 Contributing
+
+Pull requests are welcome! If you find bugs, have suggestions, or want to contribute character data, feel free to open an issue or PR.
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+
