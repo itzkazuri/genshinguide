@@ -1,7 +1,7 @@
 
 ---
 
-```md
+
 # 🌸 Genshin Impact Guide Website
 
 This is an open-source [Next.js](https://nextjs.org/) project that serves as a modular and visually appealing **Genshin Impact Guide Website**, featuring detailed character info, weapons, artifacts, and more — all powered by clean, JSON-based data.
