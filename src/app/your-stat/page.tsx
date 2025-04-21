@@ -62,15 +62,15 @@ export default function YourStat() {
     setIsLoading(true);
     setError("");
     try {
-      const response = await fetch(`/api/fetchPlayer?playerId=${playerId}`);
+      const response = await fetch(`/api/enka-player?playerId=${playerId}`);
       const data = await response.json();
       if (data.error) {
         throw new Error(data.error);
       }
-      setPlayerIP(data.ip); // Will be "N/A"
-      setStats(data.stats);
+      setPlayerIP(data.ip); // Tetap "N/A" sesuai respons API
+      setStats(data);
     } catch (err) {
-      setError("Failed to fetch player data. Please try again.");
+      setError("Failed to fetch player data. Please check the Player ID or try again later.");
     } finally {
       setIsLoading(false);
     }
@@ -82,7 +82,10 @@ export default function YourStat() {
         <title>Your Stat - Genshin Guide</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+        <link
+          href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+          rel="stylesheet"
+        />
       </Head>
 
       {/* Navbar */}
@@ -147,7 +150,7 @@ export default function YourStat() {
 
       {/* Main Content */}
       <main className="max-w-6xl mx-auto px-4 py-8 md:px-6 md:py-12 flex-grow">
-      <div className="bg-[#252529] rounded-2xl shadow-xl p-6 md:p-8">
+        <div className="bg-[#252529] rounded-2xl shadow-xl p-6 md:p-8">
           <h1 className="text-3xl md:text-4xl font-bold mb-8 text-center animate-fadeIn">
             Your Genshin Impact Stats
           </h1>
@@ -158,7 +161,7 @@ export default function YourStat() {
             <div className="flex justify-center gap-4 max-w-md mx-auto">
               <input
                 type="text"
-                placeholder="Input your Player ID"
+                placeholder="Input your Player ID (e.g., 825436941)"
                 value={playerId}
                 onChange={(e) => setPlayerId(e.target.value)}
                 className="bg-[#2a2a2e] text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 w-full"
@@ -181,7 +184,7 @@ export default function YourStat() {
               <Section title="Player Profile">
                 <div className="flex flex-col md:flex-row items-center gap-6 mb-8">
                   <ImageWithFallback
-                    src="/img/characters/traveler.webp"
+                    src="/img/characters/traveler.webp" // Ganti dengan gambar profil player jika tersedia
                     alt={stats.username}
                     sizeClass="w-32 h-32 md:w-40 md:h-40"
                     className="rounded-xl border-4 border-gray-600"
@@ -189,11 +192,21 @@ export default function YourStat() {
                   <div className="text-center md:text-left">
                     <h2 className="text-2xl font-bold mb-3">{stats.username}</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      <p><strong>Player ID:</strong> {stats.playerId}</p>
-                      <p><strong>Adventure Rank:</strong> {stats.adventureRank}</p>
-                      <p><strong>World Level:</strong> {stats.worldLevel}</p>
-                      <p><strong>Achievements:</strong> {stats.achievements}</p>
-                      <p><strong>Spiral Abyss:</strong> {stats.spiralAbyss}</p>
+                      <p>
+                        <strong>Player ID:</strong> {stats.playerId}
+                      </p>
+                      <p>
+                        <strong>Adventure Rank:</strong> {stats.adventureRank}
+                      </p>
+                      <p>
+                        <strong>World Level:</strong> {stats.worldLevel}
+                      </p>
+                      <p>
+                        <strong>Achievements:</strong> {stats.achievements}
+                      </p>
+                      <p>
+                        <strong>Spiral Abyss:</strong> {stats.spiralAbyss}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -216,14 +229,22 @@ export default function YourStat() {
                           className="rounded-full"
                         />
                         <div>
-                          <h4 className="text-lg font-semibold text-blue-300 group-hover:text-blue-400">{char.name}</h4>
+                          <h4 className="text-lg font-semibold text-blue-300 group-hover:text-blue-400">
+                            {char.name}
+                          </h4>
                           <p className="text-sm text-gray-400">Level: {char.level}</p>
                         </div>
                       </div>
                       <div className="space-y-2 text-sm">
-                        <p><strong>Constellation:</strong> {char.constellation}</p>
-                        <p><strong>Weapon:</strong> {char.weapon}</p>
-                        <p><strong>Build Quality:</strong> {char.buildIcon} {char.buildQuality}</p>
+                        <p>
+                          <strong>Constellation:</strong> {char.constellation}
+                        </p>
+                        <p>
+                          <strong>Weapon:</strong> {char.weapon}
+                        </p>
+                        <p>
+                          <strong>Build Quality:</strong> {char.buildIcon} {char.buildQuality}
+                        </p>
                       </div>
                     </Link>
                   ))}
@@ -236,7 +257,7 @@ export default function YourStat() {
 
       {/* Footer */}
       <footer className="bg-[#16324c] text-white py-8 w-full">
-      <div className="max-w-4xl mx-auto flex flex-col items-center gap-6">
+        <div className="max-w-4xl mx-auto flex flex-col items-center gap-6">
           <div className="flex justify-center gap-6">
             {[
               { href: "https://facebook.com/kadekjuli", icon: "/facebook-icon.png", alt: "Facebook" },
@@ -249,7 +270,8 @@ export default function YourStat() {
             ))}
           </div>
           <div className="text-sm text-center">
-            © 2025 Kadek Juli. All rights reserved.<br />
+            © 2025 Kadek Juli. All rights reserved.
+            <br />
             <span className="text-gray-400">This Web is Under Development</span>
           </div>
         </div>
@@ -257,17 +279,37 @@ export default function YourStat() {
 
       <style jsx>{`
         @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(20px); }
-          to { opacity: 1; transform: translateY(0); }
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
         @keyframes slideIn {
-          from { opacity: 0; transform: translateX(-20px); }
-          to { opacity: 1; transform: translateX(0); }
+          from {
+            opacity: 0;
+            transform: translateX(-20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
         }
-        .animate-fadeIn { animation: fadeIn 0.5s ease-out forwards; }
-        .animate-slideIn { animation: slideIn 0.3s ease-out; }
-        .delay-100 { animation-delay: 0.1s; }
-        .delay-200 { animation-delay: 0.2s; }
+        .animate-fadeIn {
+          animation: fadeIn 0.5s ease-out forwards;
+        }
+        .animate-slideIn {
+          animation: slideIn 0.3s ease-out;
+        }
+        .delay-100 {
+          animation-delay: 0.1s;
+        }
+        .delay-200 {
+          animation-delay: 0.2s;
+        }
       `}</style>
     </div>
   );

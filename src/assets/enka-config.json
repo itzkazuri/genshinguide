@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "metadata": {
+    "name": "EnkaNetwork API Configuration",
+    "version": "1.1.0",
+    "description": "Configuration for Genshin Impact player data fetching via EnkaNetwork API"
+  },
+  
+  "network": {
+    "ENKA_BASE_URL": "https://enka.network/api/uid/",
+    "REQUEST_TIMEOUT": 10000,
+    "RETRY_ATTEMPTS": 3,
+    "RETRY_DELAY": 1500,
+    "RATE_LIMIT_DELAY": 1000,
+    "USER_AGENT": "YourAppName/1.0 (your@email.com)"
+  },
+  
+  "cache": {
+    "CACHE_ENABLED": true,
+    "CACHE_DIRECTORY": "./.cache/enkanetwork",
+    "CACHE_TTL": 3600000,
+    "CACHE_MAX_SIZE": 50
+  },
+  
+  "localization": {
+    "LANGUAGE": "en",
+    "FALLBACK_LANGUAGE": "en",
+    "SHOW_IDS": false
+  },
+  
+  "logging": {
+    "LOG_LEVEL": "info",
+    "LOG_REQUESTS": false,
+    "LOG_ERRORS": true
+  },
+  
+  "game": {
+    "GAME": "genshin",
+    "SUPPORTED_REGIONS": ["6", "7", "8", "9"],
+    "MIN_UID_LENGTH": 6,
+    "MAX_UID_LENGTH": 9
+  },
+  
+  "features": {
+    "FETCH_CHARACTER_DETAILS": true,
+    "FETCH_WEAPON_DETAILS": true,
+    "FETCH_ARTIFACT_STATS": true,
+    "CALCULATE_BUILD_SCORE": true
+  }
+}

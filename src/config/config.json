@@ -1,0 +1,10 @@
+{
+    "ENKA_BASE_URL": "https://enka.network/api/uid/",
+    "CACHE_ENABLED": true,
+    "CACHE_DIRECTORY": "./cache",
+    "LANGUAGE": "en",
+    "REQUEST_TIMEOUT": 5000,
+    "RETRY_ATTEMPTS": 3,
+    "RETRY_DELAY": 1000,
+    "LOG_LEVEL": "info"
+  }
