@@ -17,6 +17,8 @@
 # next.js
 /.next/
 /out/
+/cache
+/.idea
 
 
 # production
@@ -42,5 +44,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+<<<<<<< HEAD
 /cache
 /.idea
+=======
+
+>>>>>>> f81ba14b03eb5b295250e342a12a47ac6a98c715
