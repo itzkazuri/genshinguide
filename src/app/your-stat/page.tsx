@@ -4,6 +4,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Head from "next/head";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 const ImageWithFallback = ({
@@ -17,20 +18,33 @@ const ImageWithFallback = ({
   className?: string;
   sizeClass: string;
 }) => {
-  const [imgSrc, setImgSrc] = useState(src);
+  const [imgSrc, setImgSrc] = useState(src || "/img/characters/default.png");
 
   useEffect(() => {
-    setImgSrc(src);
+    setImgSrc(src || "/img/characters/default.png");
   }, [src]);
+
+  // Skip rendering if src is still empty or invalid
+  if (!imgSrc) {
+    return null;
+  }
+
+  // Parse sizeClass to extract width and height (e.g., "w-16 h-16" -> 64px)
+  const sizeMatch = sizeClass.match(/w-(\d+)\s+h-(\d+)/);
+  const width = sizeMatch ? parseInt(sizeMatch[1]) * 4 : 64; // Approximate Tailwind units to pixels
+  const height = sizeMatch ? parseInt(sizeMatch[2]) * 4 : 64;
 
   return (
     <div
       className={`${sizeClass} rounded-lg overflow-hidden border-2 border-gray-600 bg-gray-800 shadow-md hover:scale-105 transition-transform ${className}`}
     >
-      <img
+      <Image
         src={imgSrc}
         alt={alt}
+        width={width}
+        height={height}
         className="w-full h-full object-cover"
+        loading="lazy"
         onError={() => setImgSrc("/img/characters/default.png")}
       />
     </div>
@@ -67,7 +81,7 @@ export default function YourStat() {
       if (data.error) {
         throw new Error(data.error);
       }
-      setPlayerIP(data.ip); // Tetap "N/A" sesuai respons API
+      setPlayerIP(data.ip); // Remains "N/A" as per API response
       setStats(data);
     } catch (err) {
       setError("Failed to fetch player data. Please check the Player ID or try again later.");
@@ -184,7 +198,7 @@ export default function YourStat() {
               <Section title="Player Profile">
                 <div className="flex flex-col md:flex-row items-center gap-6 mb-8">
                   <ImageWithFallback
-                    src="/img/characters/traveler.webp" // Ganti dengan gambar profil player jika tersedia
+                    src={stats.profilePictureUrl}
                     alt={stats.username}
                     sizeClass="w-32 h-32 md:w-40 md:h-40"
                     className="rounded-xl border-4 border-gray-600"
@@ -218,12 +232,12 @@ export default function YourStat() {
                   {stats.characters.map((char: any, index: number) => (
                     <Link
                       key={index}
-                      href={`/character/${char.name.toLowerCase()}`}
+                      href={`/character/${char.name.toLowerCase().replace(/\s+/g, "-")}`} // Normalize URL
                       className="bg-[#2a2a36] rounded-xl p-5 border border-gray-600 hover:shadow-xl transition duration-300 hover:-translate-y-1 group"
                     >
                       <div className="flex items-center gap-4 mb-4">
                         <ImageWithFallback
-                          src={`/img/genshinchar/${char.name.toLowerCase()}.webp`}
+                          src={char.iconUrl}
                           alt={char.name}
                           sizeClass="w-16 h-16"
                           className="rounded-full"

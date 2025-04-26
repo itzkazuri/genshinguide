@@ -1,0 +1,47 @@
+{
+    "name": "Klee",
+    "element": "Pyro",
+    "weapon": "Catalyst",
+    "slug": "klee",
+    "image": "klee.webp",
+    "rarity": 5,
+    "talentUpGuide": ["Elemental Skill", "Elemental Burst", "Normal Attack"],
+    "bestWeapons": [
+      { "name": "Lost Prayer to the Sacred Winds", "image": "lost-prayer-to-the-sacred-winds.png" },
+      { "name": "Skyward Atlas", "image": "skyward-atlas.png" },
+      { "name": "Solar Pearl", "image": "solar-pearl.png" },
+      { "name": "The Widsith", "image": "the-widsith.png" }
+    ],
+    "materialFarming": {
+      "talentBooks": "Teachings of Freedom",
+      "bossMaterial": "Ring of Boreas",
+      "commonMaterial": "Philanemo Mushroom",
+      "ascensionGem": "Agnidus Agate Gemstone",
+      "localSpecialty": "Philanemo Mushroom",
+      "totalMora": "2092530"
+    },
+    "artifactTypes": {
+      "pyroDPSBuild": ["Crimson Witch of Flames (4)"],
+      "burstDPSBuild": ["Lavawalker (4)"]
+    },
+    "artifactSubstats": {
+      "pyroDPSBuild": ["CRIT Rate", "CRIT DMG", "ATK%", "Elemental Mastery"],
+      "burstDPSBuild": ["CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge"]
+    },
+    "teams": {
+      "vaporizeTeam": {
+        "members": ["Klee", "Xingqiu", "Bennett", "Sucrose"],
+        "description": "Tim Vaporize memanfaatkan reaksi Pyro dan Hydro untuk menghasilkan damage besar dengan bantuan buff dan crowd control."
+      },
+      "monoPyroTeam": {
+        "members": ["Klee", "Bennett", "Thoma", "Kazuha"],
+        "description": "Full tim Pyro yang fokus pada buff ATK dan penguatan damage reaksi Pyro lewat grouping dan debuff dari Kazuha."
+      },
+      "overloadTeam": {
+        "members": ["Klee", "Fischl", "Beidou", "Bennett"],
+        "description": "Tim Overload yang mengutamakan ledakan damage dari kombinasi Pyro dan Electro, cocok untuk menghajar banyak musuh sekaligus."
+      }
+    },
+    "showcaseVideo": "https://www.youtube.com/watch?v=2bVfO9Gz7tY"
+  }
+  

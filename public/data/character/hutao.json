@@ -30,15 +30,15 @@
     },
     "teams": {
       "vaporizeTeam": {
-        "members": ["HutTao", "Xingqiu", "Zhongli", "Albedo"],
+        "members": ["Hutao", "Xingqiu", "Zhongli", "Albedo"],
         "description": "Tim Vaporize dengan Hu Tao sebagai DPS utama, Xingqiu untuk aplikasi Hydro, Zhongli sebagai shield, dan Albedo untuk sub-DPS Geo."
       },
       "doubleHydroTeam": {
-        "members": ["HuTao", "Yelan", "Xingqiu", "Zhongli"],
+        "members": ["Hutao", "Yelan", "Xingqiu", "Zhongli"],
         "description": "Tim Double Hydro yang memaksimalkan reaksi Vaporize dengan Yelan dan Xingqiu, serta perlindungan dari Zhongli."
       },
       "f2pFriendly": {
-        "members": ["HuTao", "Barbara", "Sucrose", "Xiangling"],
+        "members": ["Hutao", "Barbara", "Sucrose", "Xiangling"],
         "description": "Komposisi tim ramah F2P dengan Barbara sebagai healer, Sucrose untuk crowd control, dan Xiangling sebagai sub-DPS Pyro."
       }
     },

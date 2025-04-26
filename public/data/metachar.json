@@ -1,0 +1,38 @@
+[
+    {
+      "name": "Raiden Shogun",
+      "image": "/img/genshinchar/raiden-shogun.png",
+      "role": "Main DPS",
+      "tier": "S",
+      "element": "Electro"
+    },
+    {
+      "name": "Nahida",
+      "image": "/img/meta/nahida.png",
+      "role": "Support",
+      "tier": "S",
+      "element": "Dendro"
+    },
+    {
+      "name": "Xiangling",
+      "image": "/img/meta/xiangling.png",
+      "role": "Sub DPS",
+      "tier": "A",
+      "element": "Pyro"
+    },
+    {
+      "name": "Bennett",
+      "image": "/img/meta/bennett.png",
+      "role": "Healer/Buffer",
+      "tier": "S",
+      "element": "Pyro"
+    },
+    {
+      "name": "Yelan",
+      "image": "/img/meta/yelan.png",
+      "role": "Sub DPS",
+      "tier": "S",
+      "element": "Hydro"
+    }
+  ]
+  

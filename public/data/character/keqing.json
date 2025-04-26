@@ -1,0 +1,47 @@
+{
+    "name": "Keqing",
+    "element": "Electro",
+    "weapon": "Sword",
+    "slug": "keqing",
+    "image": "keqing.webp",
+    "rarity": 5,
+    "talentUpGuide": ["Normal Attack", "Elemental Burst", "Elemental Skill"],
+    "bestWeapons": [
+      { "name": "Mistsplitter Reforged", "image": "mistsplitter-reforged.png" },
+      { "name": "Primordial Jade Cutter", "image": "primordial-jade-cutter.png" },
+      { "name": "Lion's Roar", "image": "lions-roar.png" },
+      { "name": "The Black Sword", "image": "the-black-sword.png" }
+    ],
+    "materialFarming": {
+      "talentBooks": "Teachings of Prosperity",
+      "bossMaterial": "Ring of Boreas",
+      "commonMaterial": "Whopperflower Nectar",
+      "ascensionGem": "Vajrada Amethyst Gemstone",
+      "localSpecialty": "Cor Lapis",
+      "totalMora": "2092530"
+    },
+    "artifactTypes": {
+      "electroDPSBuild": ["Thundering Fury (4)"],
+      "physicalDPSBuild": ["Pale Flame (4)"]
+    },
+    "artifactSubstats": {
+      "electroDPSBuild": ["CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge"],
+      "physicalDPSBuild": ["CRIT Rate", "CRIT DMG", "ATK%", "Physical DMG Bonus"]
+    },
+    "teams": {
+      "aggravateTeam": {
+        "members": ["Keqing", "Nahida", "Fischl", "Kazuha"],
+        "description": "Tim Aggravate yang memanfaatkan reaksi Quicken untuk meningkatkan damage Electro Keqing secara signifikan."
+      },
+      "electrochargedTeam": {
+        "members": ["Keqing", "Fischl", "Xingqiu", "Jean"],
+        "description": "Tim Electro-Charged dengan Keqing sebagai DPS utama, didukung oleh aplikasi Hydro dari Xingqiu dan healing dari Jean."
+      },
+      "monoElectroTeam": {
+        "members": ["Keqing", "Kujou Sara", "Fischl", "Bennett"],
+        "description": "Tim Mono-Electro yang memaksimalkan buff ATK dari Kujou Sara dan Bennett untuk meningkatkan output damage Keqing."
+      }
+    },
+    "showcaseVideo": "https://www.youtube.com/watch?v=9KRDmFHDTl8"
+  }
+  

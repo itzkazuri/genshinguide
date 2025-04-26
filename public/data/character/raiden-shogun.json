@@ -1,0 +1,46 @@
+{
+    "name": "Raiden Shogun",
+    "element": "Electro",
+    "weapon": "Polearm",
+    "slug": "raiden-shogun",
+    "image": "raiden-shogun.webp",
+    "rarity": 5,
+    "talentUpGuide": ["Elemental Burst", "Elemental Skill", "Normal Attack"],
+    "bestWeapons": [
+      { "name": "Engulfing Lightning", "image": "engulfing-lightning.png" },
+      { "name": "The Catch", "image": "the-catch.png" },
+      { "name": "Skyward Spine", "image": "skyward-spine.png" }
+    ],
+    "materialFarming": {
+      "talentBooks": "Teachings of Light",
+      "bossMaterial": "Molten Moment",
+      "commonMaterial": "Old Handguard",
+      "ascensionGem": "Vajrada Amethyst Gemstone",
+      "localSpecialty": "Amakumo Fruit",
+      "totalMora": "2092530"
+    },
+    "artifactTypes": {
+      "burstDPSBuild": ["Emblem of Severed Fate (4)"],
+      "hyperbloomBuild": ["Flower of Paradise Lost (4)"]
+    },
+    "artifactSubstats": {
+      "burstDPSBuild": ["Energy Recharge", "CRIT Rate", "CRIT DMG", "ATK%"],
+      "hyperbloomBuild": ["Elemental Mastery", "Energy Recharge", "CRIT Rate", "CRIT DMG"]
+    },
+    "teams": {
+      "raidenNational": {
+        "members": ["Raiden Shogun", "Xiangling", "Xingqiu", "Bennett"],
+        "description": "Tim meta 'Raiden National' yang memanfaatkan Burst DPS Raiden dan sinergi dengan Xiangling serta Bennett untuk damage maksimal."
+      },
+      "hyperbloomTeam": {
+        "members": ["Raiden Shogun", "Nahida", "Yelan", "Kuki Shinobu"],
+        "description": "Tim Hyperbloom dengan Raiden sebagai trigger utama reaksi Hyperbloom, didukung oleh aplikasi Dendro dan Hydro dari Nahida dan Yelan."
+      },
+      "monoElectroTeam": {
+        "members": ["Raiden Shogun", "Kujou Sara", "Fischl", "Jean"],
+        "description": "Tim Mono-Electro dengan Raiden sebagai DPS utama, didukung oleh buff ATK dari Kujou Sara dan sustain dari Jean."
+      }
+    },
+    "showcaseVideo": "https://www.youtube.com/watch?v=VfN1JkxkX9g"
+  }
+  

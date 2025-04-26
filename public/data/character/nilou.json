@@ -1,0 +1,44 @@
+{
+    "name": "Nilou",
+    "element": "Hydro",
+    "weapon": "Sword",
+    "slug": "nilou",
+    "image": "nilou.webp",
+    "rarity": 5,
+    "talentUpGuide": ["Elemental Skill", "Elemental Burst", "Normal Attack"],
+    "bestWeapons": [
+      { "name": "Key of Khaj-Nisut", "image": "key-of-khaj-nisut.png" },
+      { "name": "Sacrificial Sword", "image": "sacrificial-sword.png" },
+      { "name": "Favonius Sword", "image": "favonius-sword.png" }
+    ],
+    "materialFarming": {
+      "talentBooks": "Teachings of Praxis",
+      "bossMaterial": "Tears of the Calamitous God",
+      "commonMaterial": "Fungal Spores",
+      "ascensionGem": "Varunada Lazurite Gemstone",
+      "localSpecialty": "Padisarah",
+      "totalMora": "2092530"
+    },
+    "artifactTypes": {
+      "bloomBuild": ["Flower of Paradise Lost (4)"]
+    },
+    "artifactSubstats": {
+      "bloomBuild": ["HP%", "Elemental Mastery", "Energy Recharge", "HP Flat"]
+    },
+    "teams": {
+      "bloomTeam": {
+        "members": ["Nilou", "Nahida", "Kokomi", "Dendro Traveler"],
+        "description": "Tim Bloom premium yang mengoptimalkan reaksi Bloom dengan HP scaling dari Nilou."
+      },
+      "budgetBloomTeam": {
+        "members": ["Nilou", "Collei", "Barbara", "Dendro Traveler"],
+        "description": "Versi low-cost dari tim Bloom, cocok buat F2P yang baru mulai."
+      },
+      "tripleHydroTeam": {
+        "members": ["Nilou", "Yelan", "Xingqiu", "Kokomi"],
+        "description": "Tim sustain + Bloom hybrid dengan dominasi Hydro."
+      }
+    },
+    "showcaseVideo": "https://www.youtube.com/watch?v=OE_p84J4t2o"
+  }
+  
